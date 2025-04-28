@@ -1,0 +1,30 @@
+{
+	"name": "royalcom",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"dependencies": {
+		"@emailjs/browser": "^4.4.1",
+		"classnames": "^2.5.1",
+		"motion": "^11.18.2",
+		"next": "14.2.5",
+		"react": "^18.3.1",
+		"clsx": "^2.1.1",
+		"react-dom": "^18.3.1",
+		"react-icons": "^5.5.0"
+	},
+	"devDependencies": {
+		"@types/node": "20.14.11",
+		"@types/react": "18.3.3",
+		"autoprefixer": "^10.4.21",
+		"eslint": "^8.57.1",
+		"eslint-config-next": "14.2.5",
+		"postcss": "^8.5.3",
+		"tailwindcss": "^3.4.17"
+	}
+}

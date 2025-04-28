@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1 {
+  letter-spacing: -0.025em;
+  font-weight: 300;
+}
+
+:root {
+  --foreground-color: #101010; /* Default: Black */
+  --background-start-color: #fefefe; /* background start color */
+  --background-end-color: #fefefe; /* background end color */
+}
+
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  color: var(--foreground-color);
+  font-family: var(--font-inter); /* Default body font */
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--background-end-color)
+    )
+    var(--background-start-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
