@@ -12,7 +12,6 @@ export default function Home() {
 		<section className="flex flex-col h-full">
 			<Hero />
 			<About/>
-			
 			<Services variation="homeService"/>
 			<Faqs/>
 			<CTASection/>

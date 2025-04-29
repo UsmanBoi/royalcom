@@ -350,7 +350,7 @@ export const serviceData = [
 	{
 		id: 3,
 		title: "Insurance Verification",
-		headline: "Ensuring seamless patient coverage. Covering Insurance back to back full time.Ensuring seamless patient coverage. Covering Insurance back to back full time.",
+		headline: "Ensuring seamless patient coverage. Covering Insurance back to back full time. Ensuring seamless patient coverage.",
 		description:
 			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "insurance-verification",
@@ -477,9 +477,9 @@ export const secHeading =
 export const paddingClass = "px-4 md:px-6 lg:px-12 xl:px-16 2xl:px-20";
 
 export const menuLinks = [
-	{id: 1, link_title:  "Services" , link_url: "/services"},
-	{id: 2, link_title:  "Benefits" , link_url: "/benefits"},
-	{id: 3, link_title:  "About Us" , link_url: "/about"},
+	{id: 1, link_title:  "About Us" , link_url: "/about"},
+	{id: 2, link_title:  "Services" , link_url: "/services"},
+	{id: 3, link_title:  "Benefits" , link_url: "/benefits"},
 	{id: 4, link_title:  "Blog" , link_url: "/blogs"},
 ]
 export const serviceLinks = [

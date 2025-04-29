@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en" className={``}>
+		<html lang="en" className={`no-scrollbar`}>
 			<body className={inter.className}>
 				<main className="h-auto">
 					<Header />

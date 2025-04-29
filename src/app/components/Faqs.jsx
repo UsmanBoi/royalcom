@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Bounded from "./ui/Bounded";
 import Link from "next/link";
 import { GoArrowRight } from "react-icons/go";
-import { faqData, secHeading } from "../constants";
+import { faqData } from "../constants";
 
 const Faqs = () => {
 	return (
@@ -12,11 +12,11 @@ const Faqs = () => {
       className={`h-auto w-full py-10 max-sm:py-2`}
     >
       <div
-        className={`grid gap-y-14 py-10 sm:gap-y-20 md:grid-cols-2 lg:py-20 xl:justify-items-center xl:place-self-center 2xl:max-w-screen-xl 3xl:max-w-screen-2xl max-sm:py-2 max-sm:pb-10`}
+        className={`grid gap-y-14 py-10 sm:gap-y-20 md:grid-cols-2 lg:py-20 xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl max-sm:py-2 max-sm:pb-10`}
       >
         <div className="flex w-full flex-col justify-between gap-y-2 self-start sm:h-full">
           <h1
-            className={`h-fit leading-[1.3em] sm:w-[30rem] md:w-[36rem] ${secHeading}`}
+            className={`h-fit leading-[1.3em] sm:w-[30rem] md:w-[36rem] text-5xl md:text-[52px] lg:text-6xl -tracking-[0.03em] xl:text-7xl font-light capitalize`}
             style={{ wordSpacing: "0.1em" }}
           >
             Frequently Asked Questions
@@ -25,7 +25,7 @@ const Faqs = () => {
             <button type="button" className={`w-fit`}>
               <Link href="/">
                 {/* Button text */}
-                <span className="text-lg">View All</span>
+                <span className="text-lg lg:text-xl xl:text-2xl">View All</span>
               </Link>
             </button>
             <GoArrowRight
@@ -52,18 +52,18 @@ export const FaqCard = ({ cardData }) => {
   };
 
   return (
-    <div className="w-full space-y-4 px-2 2xl:max-w-screen-xl 3xl:max-w-screen-2xl">
+    <div className="w-full space-y-4 px-2 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
       {cardData.map((faq, index) => (
-        <div key={index} className="border-b border-gray-300 pb-4 font-normal">
+        <div key={index} className="border-b lg:-mt-3 border-gray-300 py-2 font-normal">
           <button
             type="button"
             onClick={() => toggleItem(index)}
-            className="flex w-full items-center justify-between py-2 text-left sm:text-lg xl:text-2xl 2xl:text-[28px]"
+            className="flex w-full items-center justify-between py-3 text-left sm:text-lg lg:text-xl xl:text-2xl 2xl:text-[26px]"
           >
             <span className={openIndex === index ? "text-blue-600" : ""}>
               {faq.question}
             </span>
-            <span>{openIndex === index ? "-" : "+"}</span>
+            <span className={`${openIndex === index ? "text-blue-600 " : ""} transition-all duration-300 ease-in-out `}><GoArrowRight className={`${openIndex === index ? "rotate-90" : ""} transition-all duration-300 ease-in-out`}/></span>
           </button>
 
           <div

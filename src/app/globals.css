@@ -7,6 +7,12 @@ h1 {
   font-weight: 300;
 }
 
+h2,
+p,
+span{
+  letter-spacing: -4%;
+}
+
 :root {
   --foreground-color: #101010; /* Default: Black */
   --background-start-color: #fefefe; /* background start color */
