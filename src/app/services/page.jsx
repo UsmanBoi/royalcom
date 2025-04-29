@@ -1,10 +1,11 @@
 import React from "react";
+import Services from "../components/Services";
 
 const ServicePage = () => {
 	return (
 		<>
 			<section className=" mb-10">
-				Services
+				<Services pagetype="services" variation="default"/>
 			</section>
 		</>
 	);

@@ -15,11 +15,10 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={``}>
 			<body className={inter.className}>
-				<main className="">
+				<main className="h-auto">
 					<Header />
-					<div className="flex mt-24">
+					<div className="flex mt-24 h-full">
 					{children}
-
 					</div>
 					<Footer extraStyle="text-mywhite-50 bg-myblack-50" />
 					</main>

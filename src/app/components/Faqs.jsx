@@ -1,54 +1,83 @@
-import CollapsibleList from "./ui/CollapsibleList";
-
-const faqData = [
-	{
-		id: 1,
-		question: "What makes your products unique?",
-		answer:
-			"Our products are crafted with quality materials and elegant designs that ensure durability and aesthetic appeal. Our team focuses on details that make each product reliable and beautiful for any space.",
-	},
-	{
-		id: 2,
-		question: "Are your products durable?",
-		answer:
-			"Yes, we emphasize durability in all our products. Using high-quality materials and rigorous testing, we ensure each product meets our standards for longevity.",
-	},
-	{
-		id: 3,
-		question: "Do you offer support for product installation?",
-		answer:
-			"Absolutely! We offer dedicated customer support to assist with installation questions. Our team is here to help you set up and enjoy your new purchase.",
-	},
-	{
-		id: 4,
-		question: "What is your return policy?",
-		answer:
-			"If you’re not satisfied with your purchase, we offer a hassle-free return policy. Please contact our support team within 30 days of receiving your product for assistance.",
-	},
-	{
-		id: 5,
-		question: "How can I contact customer support?",
-		answer:
-			"You can reach out to our customer support team via email or phone. We’re dedicated to assisting you with any questions or issues you may have.",
-	},
-];
+"use client";
+import React, { useState } from "react";
+import Bounded from "./ui/Bounded";
+import Link from "next/link";
+import { GoArrowRight } from "react-icons/go";
+import { faqData, secHeading } from "../constants";
 
 const Faqs = () => {
 	return (
-		<section className="mx-auto w-full max-lg:my-20 mb-20">
-			<h2 className="font-bold  text-6xl sm:text-7xl md:text-8xl lg:text-9xl 2xl:text-[15rem] max-2xl:mb-10 text-center">
-				faqs
-			</h2>
-			<div className="space-y-4 font-bold ">
-				<CollapsibleList
-					data={faqData}
-					questionClassName="sm:text-xl lg:text-3xl 2xl:text-4xl"
-					answerClassName="text-lg lg:text-[1.4rem] 2xl:text-2xl  font-thin tracking-wide "
-					containerClassName="mb-10"
-				/>
-			</div>
-		</section>
+		<Bounded
+
+      className={`h-auto w-full py-10 max-sm:py-2`}
+    >
+      <div
+        className={`grid gap-y-14 py-10 sm:gap-y-20 md:grid-cols-2 lg:py-20 xl:justify-items-center xl:place-self-center 2xl:max-w-screen-xl 3xl:max-w-screen-2xl max-sm:py-2 max-sm:pb-10`}
+      >
+        <div className="flex w-full flex-col justify-between gap-y-2 self-start sm:h-full">
+          <h1
+            className={`h-fit leading-[1.3em] sm:w-[30rem] md:w-[36rem] ${secHeading}`}
+            style={{ wordSpacing: "0.1em" }}
+          >
+            Frequently Asked Questions
+          </h1>
+          <div className="ml-2 flex w-fit items-center text-2xl transition-all duration-300 ease-in-out xl:text-3xl">
+            <button type="button" className={`w-fit`}>
+              <Link href="/">
+                {/* Button text */}
+                <span className="text-lg">View All</span>
+              </Link>
+            </button>
+            <GoArrowRight
+              className={`w-12 transition-all duration-300 ease-in-out`}
+            />
+          </div>
+        </div>
+
+        <FaqCard cardData={faqData}
+        />
+      </div>
+    </Bounded>
 	);
 };
 
 export default Faqs;
+
+
+export const FaqCard = ({ cardData }) => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const toggleItem = (index) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
+
+  return (
+    <div className="w-full space-y-4 px-2 2xl:max-w-screen-xl 3xl:max-w-screen-2xl">
+      {cardData.map((faq, index) => (
+        <div key={index} className="border-b border-gray-300 pb-4 font-normal">
+          <button
+            type="button"
+            onClick={() => toggleItem(index)}
+            className="flex w-full items-center justify-between py-2 text-left sm:text-lg xl:text-2xl 2xl:text-[28px]"
+          >
+            <span className={openIndex === index ? "text-blue-600" : ""}>
+              {faq.question}
+            </span>
+            <span>{openIndex === index ? "-" : "+"}</span>
+          </button>
+
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              openIndex === index
+                ? "mt-2 max-h-40 text-base leading-normal opacity-100"
+                : "mt-0 max-h-0 text-sm leading-tight opacity-0"
+            }`}
+          >
+            <p className="xl:text-xl">{faq.answer}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
