@@ -10,7 +10,7 @@ const ServicePage = () => {
 				subheading="A new deep end of relationship. Pinned on an all too rare privilege: the people we introduce you to are the ones who actually conduct your search."
 				containerClass="pb-3"
 				img1src="/CSR.jpg"
-				img2src="/group.jpg"
+				img2src="/stairs2.jpg"
 			/>
 			<Services
 				pagetype="services"

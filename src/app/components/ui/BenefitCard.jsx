@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import StaticImg from "./StaticImg";
 import React, { useState } from "react";
 import { getCurrentScreenSize } from "../../constants";
 
@@ -22,12 +22,12 @@ const BenefitCard = ({ cardData }) => {
 							{benefit.headline}
 						</span>
 					</div>
-					<div className="relative h-[10rem] lg:h-[13rem] 2xl:h-[15rem]">
-						<Image
+					<div className="relative h-[10rem] rounded lg:h-[13rem] 2xl:h-[15rem]">
+						<StaticImg
 							fill
 							alt="alt text"
 							src={benefit.imgPath}
-							className="h-full w-full object-contain object-center"
+							className="h-full w-full rounded object-contain object-center"
 						/>
 					</div>
 				</div>

@@ -23,8 +23,8 @@ const Footer = ({ extraStyle = "" }) => {
 						</span>
 					</div>
 
-					<div className="flex w-full lg:justify-between gap-x-4 lg:gap-x-8 max-w-4xl">
-						<div className="flex-1 flex flex-col gap-5 lg:max-w-40">
+					<div className="flex w-full lg:justify-between  max-lg:gap-x-6 max-w-4xl">
+						<div className="flex-1 flex flex-col gap-5 max-w-36 lg:max-w-40">
 							<h2 className="text-xl md:text-2xl 2xl:text-3xl opacity-50 font-light">
 								Company
 							</h2>
@@ -34,7 +34,7 @@ const Footer = ({ extraStyle = "" }) => {
 								menutype="mainMenu"
 							/>
 						</div>
-						<div className="flex-1 flex flex-col gap-5 w-full lg:max-w-60 max-md:hidden">
+						<div className="flex-1 flex flex-col gap-5 max-w-52 lg:max-w-60 max-md:hidden">
 							<h2 className="text-xl md:text-2xl 2xl:text-3xl opacity-50 font-light">
 								Services
 							</h2>
@@ -44,11 +44,11 @@ const Footer = ({ extraStyle = "" }) => {
 								menutype="servicesMenu"
 							/>
 						</div>
-						<div className="flex-1 flex flex-col gap-y-5 lg:max-w-72">
+						<div className="flex-1 flex flex-col gap-y-5 max-w-56 lg:max-w-72">
 							<h2 className="text-xl md:text-2xl 2xl:text-3xl opacity-50 font-light">
 								Contact
 							</h2>
-							<div className="flex flex-col gap-4 place-self-end">
+							<div className="flex flex-col gap-4 ">
 								<span className="text-sm xl:text-base">
 									info@royalcomsol.com
 								</span>

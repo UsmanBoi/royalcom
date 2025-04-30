@@ -5,7 +5,7 @@ import { blogData, paddingClass } from "../constants";
 
 const BlogPage = () => {
 	return (
-		<section className="mb-10">
+		<section className="">
 			<SecHero
 				heading="Blogs & articles"
 				subheading=""

@@ -6,41 +6,44 @@ export const blogData = [
 			"This article will explain the importance of credentialing for your firm.",
 		slug: "importance-of-credentialing",
 		imgPath: "/group.jpg",
-		urlpath: "/blogs/${card.slug}",
-		type: "blog",
-		date: "24-02-2024",
+		date: "12-04-2025",
 		minutes: 5,
-		featuredImage: "/blog1ftd.png",
+		featuredImage: "/RCM.jpg",
 		content: [
 			{
 				id: 1,
-				heading: "the power of first impressions",
-				para: `Picture this: a consumer scrolling through a sea of options, making split-second decisions. What catches their eye? More often than not, it's the visual allure of a well-crafted logo. Logos serve as the initial handshake, the proverbial "hello" that establishes the first connection between a brand and its audience. A striking logo becomes the face of the brand, etching itself into the memory of consumers.`,
+				heading: "streamlining operations through credentialing",
+				para: `Credentialing isn't just paperwork — it’s essential for keeping your practice running smoothly. It verifies a provider’s qualifications so they can bill insurance companies and see patients. Done right, it prevents revenue loss and delays.`,
 			},
 			{
 				id: 2,
-				heading: "the visual symphony of brand identity",
-				para: `While a logo is a pivotal element, it's only one note in the symphony of brand identity. A brand encompasses a holistic experience — the emotions, values, and promises associated with a product or service. The logo, in turn, is the visual representation of this multifaceted identity. It encapsulates the brand's essence, acting as a beacon that communicates the company's personality and ethos in a succinct visual language.`,
+				heading: "cutting down admin stress",
+				para: `In-house teams often get buried in the credentialing process, causing mistakes and delays. Credentialing services take over the entire workflow, letting staff focus on patient care instead of chasing documents.`,
 			},
 			{
 				id: 3,
-				heading: "the art of distinction",
-				para: `In a crowded marketplace, differentiation is the heartbeat of success. A compelling logo serves as a unique identifier, allowing a brand to stand out amid the cacophony of competitors. It fosters instant recognition, creating a mental shortcut for consumers navigating the labyrinth of choices. Think of iconic logos like the bitten apple of Apple Inc. or the golden arches of McDonald's — simple yet profound symbols that transcend language, becoming universal markers of their respective brands.`,
+				heading: "avoiding costly disruptions",
+				para: `If providers aren't credentialed, they can't treat patients or get reimbursed. Credentialing services ensure timely applications and renewals — keeping care uninterrupted and revenue flowing.`,
 			},
 			{
 				id: 4,
-				heading: "the longevity factor",
-				para: `While marketing trends may evolve and consumer preferences shift, a well-designed logo possesses enduring power. Unlike campaigns that come and go, logos have the potential for timeless relevance. They become a symbol of trust, representing the consistency and reliability that consumers seek in the products or services they choose.`,
+				heading: "staying compliant",
+				para: `Regulatory standards require up-to-date and accurate credentials. Credentialing services help maintain compliance, protect against legal issues, and prevent delays in insurance reimbursements.`,
 			},
 			{
 				id: 5,
-				heading: "beyond the surface: the comprehensive brand experience",
-				para: `It's crucial to acknowledge that a brand is not merely a logo. It's a living, breathing entity that evolves with time, interactions, and consumer perceptions. The logo is the anchor, but the brand extends its influence through customer experiences, messaging, and the overall narrative.`,
+				heading: "credentialing's revenue impact",
+				para: `Credentialed providers gain access to more insurance networks, allowing practices to serve a wider patient base. This means higher revenue and faster reimbursements without billing delays or denials.`,
 			},
 			{
 				id: 6,
+				heading: "boosting provider satisfaction",
+				para: `Credentialing delays frustrate providers. Services that speed up the process and reduce admin work let providers focus on care, improve job satisfaction, and support long-term retention.`,
+			},
+			{
+				id: 7,
 				heading: "in conclusion",
-				para: `the importance of logos in branding cannot be overstated. They are the visual catalysts that spark recognition, trust, and loyalty. However, it's essential to view logos as integral components of a broader brand ecosystem. While logos serve as the initial handshake, the brand experience is the ongoing conversation — a dynamic interplay that leaves a lasting imprint on the hearts and minds of consumers. In the grand tapestry of business, logos and brands coalesce to create narratives that resonate and endure.`,
+				para: `Effective credentialing is vital for practice growth. It ensures providers can deliver care, get paid, and stay compliant — all while reducing stress and enhancing patient and provider experiences.`,
 			},
 		],
 	},
@@ -51,36 +54,39 @@ export const blogData = [
 			"This article will explain the importance and benefits of medical billing for your firm.",
 		slug: "importance-of-medical-coding",
 		imgPath: "/blog1.jpg",
-		urlpath: "/blogs/${card.slug}",
-		type: "blog",
 		date: "24-02-2024",
 		minutes: 15,
-		featuredImage: "/blog1ftd.png",
+		featuredImage: "/RCM.jpg",
 		content: [
 			{
 				id: 1,
-				heading: "the blueprint of creativity",
-				para: `Mockups are the visual prototypes that bridge the gap between abstract ideas and tangible outcomes. They provide a clear representation of how the final design will appear, enabling teams to visualize, refine, and communicate ideas effectively before any significant investment in development or production.`,
+				heading: "why accurate coding matters",
+				para: `Medical coding turns patient visits into billable services. When done right, it ensures full reimbursement and smooth cash flow. Mistakes lead to denials, delays, and lost revenue.`,
 			},
 			{
 				id: 2,
-				heading: "enhancing collaboration",
-				para: `A well-crafted mockup serves as a common ground for designers, developers, and stakeholders. It simplifies communication, ensuring everyone is aligned on the project's vision and expectations. Feedback loops become more productive, paving the way for smoother execution.`,
+				heading: "staying current with coding updates",
+				para: `ICD-10 and CPT codes change often. Falling behind can lead to claim rejections. Certified coders or billing partners help keep your coding accurate and compliant.`,
 			},
 			{
 				id: 3,
-				heading: "minimizing costly revisions",
-				para: `Mockups act as a safety net, catching potential design flaws or inconsistencies early in the process. By addressing issues in the mockup phase, businesses can save both time and money, avoiding extensive rework during development or production.`,
+				heading: "audits that protect your revenue",
+				para: `Compliance audits catch coding and billing errors early—like upcoding, undercoding, or unbundling—so you avoid denials, overcharges, or penalties.`,
 			},
 			{
 				id: 4,
-				heading: "elevating client confidence",
-				para: `For clients, mockups offer a tangible preview of the final product, fostering trust and confidence. They can see their vision come to life and provide informed input, ensuring their satisfaction with the outcome.`,
+				heading: "keeping legal issues at bay",
+				para: `Incorrect billing can trigger payer audits or fines. Regular internal audits reduce risk and help small practices stay compliant with industry standards.`,
 			},
 			{
 				id: 5,
-				heading: "the competitive edge",
-				para: `In a fast-paced market, the ability to present polished mockups can set a brand apart. It reflects professionalism, attention to detail, and a commitment to excellence, leaving a lasting impression on clients and stakeholders alike.`,
+				heading: "long-term audit benefits",
+				para: `Beyond fixing errors, audits improve training, tighten documentation, and help submit cleaner claims—boosting revenue and efficiency over time.`,
+			},
+			{
+				id: 6,
+				heading: "best practices for small practices",
+				para: `Audit regularly, work with certified coders, and use billing software to catch issues early. These steps help maximize reimbursements and minimize disruptions.`,
 			},
 		],
 	},
@@ -91,36 +97,49 @@ export const blogData = [
 			"In the digital age, where visibility dictates success, SEO acts as the guiding beacon, connecting businesses to their audience and turning searches into meaningful actions.",
 		slug: "SEO-role-in-conversion",
 		imgPath: "/group.jpg",
-		urlpath: "/blogs/${card.slug}",
-		type: "blog",
 		date: "24-02-2024",
 		minutes: 12,
-		featuredImage: "/blog1ftd.png",
+		featuredImage: "/RCM.jpg",
 		content: [
 			{
 				id: 1,
-				heading: "the foundation of visibility",
-				para: `Search Engine Optimization (SEO) ensures that your website appears prominently in search results, driving organic traffic. By targeting the right keywords and optimizing content, businesses attract users who are actively seeking their products or services.`,
+				heading: "optimizing the revenue cycle for small practices",
+				para: `This guide breaks down steps to streamline the revenue cycle, from front to back office, offering tips to improve financial management and reduce administrative burdens.`,
 			},
 			{
 				id: 2,
-				heading: "building trust through credibility",
-				para: `Websites that rank higher in search results are often perceived as more trustworthy. SEO practices such as acquiring backlinks, improving site speed, and publishing high-quality content enhance credibility, encouraging users to engage further.`,
+				heading: "understanding the revenue cycle",
+				para: `The healthcare revenue cycle includes everything from patient scheduling to payment collection. Any inefficiency can result in delays and lost revenue. Identifying and fixing bottlenecks is key.`,
 			},
 			{
 				id: 3,
-				heading: "targeting the right audience",
-				para: `SEO allows businesses to hone in on specific audiences by tailoring content to their search intent. This precision targeting results in higher-quality leads, as visitors are more likely to convert when the content aligns with their needs.`,
+				heading: "front office: setting up for success",
+				para: `The revenue cycle begins with patient scheduling, registration, and insurance verification. Automating scheduling and verifying insurance coverage early on can reduce errors and prevent claim denials.`,
 			},
 			{
 				id: 4,
-				heading: "enhancing user experience",
-				para: `SEO goes beyond keywords; it prioritizes user experience. Features like mobile-friendly design, intuitive navigation, and fast-loading pages create a seamless experience, reducing bounce rates and increasing conversions.`,
+				heading: "clinical documentation: ensuring accuracy",
+				para: `Accurate documentation is vital for billing. Clinicians must ensure patient encounters and procedures are documented properly. Using Electronic Health Records (EHR) systems helps reduce errors and streamline billing.`,
 			},
 			{
 				id: 5,
-				heading: "the conversion multiplier",
-				para: `By aligning SEO strategies with conversion optimization techniques, businesses can achieve exponential results. Higher traffic from targeted SEO efforts coupled with engaging calls-to-action and optimized landing pages leads to significant improvements in conversion rates.`,
+				heading: "coding and billing: core to the cycle",
+				para: `Skilled coders ensure claims are accurate and compliant with coding guidelines. Submitting clean claims reduces the chances of rejections and delays, leading to faster payments.`,
+			},
+			{
+				id: 6,
+				heading: "back office: ensuring timely payments",
+				para: `Back-office tasks like payment posting and managing denied claims are crucial for maintaining cash flow. Tracking denials and outsourcing certain tasks can boost efficiency and ensure prompt payments.`,
+			},
+			{
+				id: 7,
+				heading: "leveraging technology to streamline processes",
+				para: `Practice management software integrates scheduling, coding, and billing, while automated claim submission tools help reduce human errors. Analytics provide valuable insights to track and improve performance.`,
+			},
+			{
+				id: 8,
+				heading: "the key to better financial health",
+				para: `Streamlining the revenue cycle is essential for small practices to improve cash flow and reduce administrative strain. Optimizing each step and using technology ensures smoother operations and faster payments.`,
 			},
 		],
 	},
@@ -131,36 +150,49 @@ export const blogData = [
 			"In a world where user attention is fleeting, animation transforms static interfaces into dynamic experiences, creating interactions that captivate and engage.",
 		slug: "Static-UI-Get-Animation",
 		imgPath: "/blog2.jpg",
-		urlpath: "/blogs/${card.slug}",
-		type: "blog",
 		date: "24-02-2024",
 		minutes: 5,
-		featuredImage: "/blog1ftd.png",
+		featuredImage: "/RCM.jpg",
 		content: [
 			{
 				id: 1,
-				heading: "captivating attention through motion",
-				para: `Animation breathes life into static interfaces, capturing user attention in milliseconds. Dynamic elements guide users seamlessly through content, making interactions more engaging and intuitive.`,
+				heading: "medical coding and reimbursement",
+				para: `Medical coding, including ICD-10 and CPT codes, is essential for documenting patient encounters and ensuring accurate billing to insurance companies. Proper coding ensures full reimbursement and prevents claim denials.`,
 			},
 			{
 				id: 2,
-				heading: "enhancing storytelling",
-				para: `Animations transform data and narratives into captivating visual stories. From interactive infographics to animated product showcases, motion design conveys complex ideas effortlessly, leaving a lasting impact on users.`,
+				heading: "connection between coding and reimbursement",
+				para: `Accurate coding ensures healthcare providers are reimbursed fully for services. Coding errors can lead to claim denials, underpayments, or delays, affecting cash flow and revenue cycle management.`,
 			},
 			{
 				id: 3,
-				heading: "improving user feedback",
-				para: `Interactive animations provide immediate feedback, reducing user frustration. Hover effects, loading animations, and transitions signal system responses, creating a smoother and more satisfying user journey.`,
+				heading: "staying updated on coding changes",
+				para: `With constant updates to ICD-10 and CPT codes, small practices must stay current to avoid errors. Outsourcing to certified coders or professional billing services ensures compliance with the latest codes and guidelines.`,
 			},
 			{
 				id: 4,
-				heading: "boosting brand identity",
-				para: `Well-executed animations become signature elements of a brand's identity. Subtle micro-interactions and animated logos make brands memorable, fostering stronger connections with their audience.`,
+				heading: "the role of compliance audits",
+				para: `Compliance audits identify coding errors, billing discrepancies, and legal risks. These audits prevent issues like upcoding, undercoding, and unbundling, ensuring proper reimbursement and reducing the risk of penalties.`,
 			},
 			{
 				id: 5,
-				heading: "staying ahead in the digital age",
-				para: `As technology evolves, static designs feel outdated. Embracing animation demonstrates a commitment to innovation, positioning brands as forward-thinking and in tune with modern design trends.`,
+				heading: "identifying errors and reducing risks",
+				para: `Compliance audits uncover issues like upcoding, undercoding, and unbundling. By identifying these errors early, practices can avoid denials and ensure full reimbursement while protecting themselves from legal penalties.`,
+			},
+			{
+				id: 6,
+				heading: "how audits improve revenue cycle management",
+				para: `Regular audits minimize claim denials, improve staff training, and streamline documentation practices. These benefits enhance efficiency, reduce payment delays, and ensure consistent cash flow.`,
+			},
+			{
+				id: 7,
+				heading: "best practices for coding and compliance audits",
+				para: `To maintain a successful audit process, conduct regular audits, use certified coders, and leverage technology like practice management software and EHR systems to improve accuracy and efficiency.`,
+			},
+			{
+				id: 8,
+				heading: "conclusion",
+				para: `Medical coding and compliance audits are crucial for maximizing reimbursements and ensuring small practices maintain financial health. By staying updated, conducting regular audits, and leveraging expert coders, practices can optimize their revenue cycle and avoid costly mistakes.`,
 			},
 		],
 	},
@@ -171,11 +203,9 @@ export const blogData = [
 			"In a world where user attention is fleeting, animation transforms static interfaces into dynamic experiences, creating interactions that captivate and engage.",
 		slug: "Static-UI-Get-Animation",
 		imgPath: "/blog1.jpg",
-		urlpath: "/blogs/${card.slug}",
-		type: "blog",
 		date: "24-02-2024",
 		minutes: 5,
-		featuredImage: "/blog1ftd.png",
+		featuredImage: "/RCM.jpg",
 		content: [
 			{
 				id: 1,
@@ -211,11 +241,9 @@ export const blogData = [
 			"In a world where user attention is fleeting, animation transforms static interfaces into dynamic experiences, creating interactions that captivate and engage.",
 		slug: "Static-UI-Get-Animation",
 		imgPath: "/blog2.jpg",
-		urlpath: "/blogs/${card.slug}",
-		type: "blog",
 		date: "24-02-2024",
 		minutes: 5,
-		featuredImage: "/blog1ftd.png",
+		featuredImage: "/RCM.jpg",
 		content: [
 			{
 				id: 1,
@@ -252,99 +280,104 @@ export const serviceData = [
 		title: "Medical Billing and Coding",
 		headline:
 			"Streamlining financial processes of your firm. All the processes are automated and regularly checked.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "medical-billing-and-coding",
-		imgPath: "/finance.jpg",
-		service_link: "/services/${service.slug}",
+		imgPath: "/nurse.jpg",
+		content: [
+			"At RoyalCom, we treat medical billing and coding as the heartbeat of your practice’s financial health. We don’t just plug in codes — we make sure every detail matches the care provided, which helps avoid claim rejections and delays. You can count on us for accuracy and speed.",
+			"What sets us apart is our hands-on, proactive approach. We take time to understand your specialty and tailor our coding process around your specific needs. This helps you get paid properly for the work you do — without the back-and-forth.",
+			"Other providers may be satisfied with just “good enough.” We go the extra step by double-checking entries, watching for compliance issues, and staying updated on changes in codes. That’s why our clients see fewer denials and faster payouts.",
+		],
 	},
 	{
 		id: 2,
 		title: "Revenue Cycle Management",
 		headline:
 			"End-to-end billing, claims processing, and payment collection to maximize revenue.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "revenue-cycle-management",
-		imgPath: "/RCM.jpg",
-		service_link: "/services/${service.slug}",
+		imgPath: "/finance.jpg",
+		content: [
+			"RoyalCom looks at the full revenue cycle — not just pieces of it. From patient intake to the final payment, we monitor every step to make sure you don’t lose a dime. We don’t just fix problems; we help prevent them.",
+			"Where other companies focus only on billing, we give attention to your workflow, timing, and cash flow patterns. That means your revenue doesn’t just come in — it comes in smoothly and consistently.",
+			"We act like a real partner, not a vendor. You’ll get quick updates, clear reporting, and a team that understands your goals. Our goal is simple: help you run a healthier business with less hassle.",
+		],
 	},
 	{
 		id: 3,
 		title: "Insurance Verification",
 		headline:
 			"Ensuring seamless patient coverage. Covering Insurance back to back full time. Ensuring seamless patient coverage.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "insurance-verification",
-		imgPath: "/auth1.jpg",
-		service_link: "/services/${service.slug}",
+		imgPath: "/couple.jpg",
+		content: [
+			"We know how frustrating it is to deal with delayed payments because of insurance issues. That’s why RoyalCom verifies coverage quickly, clearly, and thoroughly — before the patient even walks in.",
+			"Our team contacts payers directly, confirms benefits, and checks for authorization requirements. This saves your front desk hours and helps prevent costly billing mistakes later on.",
+			"Unlike others who use outdated tools or skim the details, we dig in and get answers. Our process is clean and consistent, giving your staff and patients peace of mind before treatment begins.",
+		],
 	},
 	{
 		id: 4,
 		title: "Claims Denial Management",
 		headline:
 			"Identifying, analyzing, and resolving denied insurance claims to optimize reimbursements and reduce revenue loss.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "claims-denial-management",
-		imgPath: "/efficiency.png",
-		service_link: "/services/${service.slug}",
+		imgPath: "/claim.jpg",
+		content: [
+			"At RoyalCom, we don’t wait for denied claims to pile up — we tackle them head-on. Our team investigates each denial, finds the root cause, and resubmits fast. You won’t be stuck guessing what went wrong.",
+			"Many providers just resubmit without correcting the problem. We look deeper, fix errors, and make sure the same issue doesn’t happen again. That saves time and boosts your recovery rate.",
+			"With RoyalCom, you get transparency. We’ll show you what’s being denied, why, and what we’re doing about it. Fewer denials, quicker payments — that’s our standard.",
+		],
 	},
 	{
 		id: 5,
 		title: "Authorization Services",
 		headline:
 			"Managing insurance approvals for medical procedures to ensure hassle-free treatment.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "authorization-services",
 		imgPath: "/auth.jpg",
-		service_link: "/services/${service.slug}",
+		content: [
+			"Pre-authorizations can slow everything down — unless you have a team like RoyalCom. We handle them quickly and correctly so your schedule runs on time and your claims get approved.",
+			"We know exactly what documents payers need and how to talk to them. That helps us cut through red tape and get faster approvals with fewer callbacks.",
+			"Other providers take days. We move in hours. And we keep your staff updated every step of the way so no one’s left wondering what’s next. It’s smooth, simple, and reliable.",
+		],
 	},
 	{
 		id: 6,
 		title: "Data Management",
 		headline:
 			"Secure and efficient back-office solutions. Custom built systems and solutions for secure data processing.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "data-management",
-		imgPath: "/efficiency.png",
-		service_link: "/services/${service.slug}",
+		imgPath: "/data.jpg",
+		content: [
+			"At RoyalCom, we treat medical billing and coding as the heartbeat of your practice’s financial health. We don’t just plug in codes — we make sure every detail matches the care provided, which helps avoid claim rejections and delays. You can count on us for accuracy and speed.",
+			"What sets us apart is our hands-on, proactive approach. We take time to understand your specialty and tailor our coding process around your specific needs. This helps you get paid properly for the work you do — without the back-and-forth.",
+			"Other providers may be satisfied with just “good enough.” We go the extra step by double-checking entries, watching for compliance issues, and staying updated on changes in codes. That’s why our clients see fewer denials and faster payouts.",
+		],
 	},
 	{
 		id: 7,
-		title: "Healthcare Customer Support",
-		headline:
-			"24/7 patient assistance, appointment reminders, and query resolution for improved satisfaction.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
-		slug: "healthcare-customer-support",
-		imgPath: "/CSR.jpg",
-		service_link: "/services/${service.slug}",
-	},
-	{
-		id: 8,
 		title: "Telehealth Support Services",
 		headline:
 			"Assisting healthcare providers with virtual consultations, appointment scheduling, and patient queries.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "telehealth-support-services",
-		imgPath: "/efficiency.png",
-		service_link: "/services/${service.slug}",
+		imgPath: "/CSR.jpg",
+		content: [
+			"At RoyalCom, we treat medical billing and coding as the heartbeat of your practice’s financial health. We don’t just plug in codes — we make sure every detail matches the care provided, which helps avoid claim rejections and delays. You can count on us for accuracy and speed.",
+			"What sets us apart is our hands-on, proactive approach. We take time to understand your specialty and tailor our coding process around your specific needs. This helps you get paid properly for the work you do — without the back-and-forth.",
+			"Other providers may be satisfied with just “good enough.” We go the extra step by double-checking entries, watching for compliance issues, and staying updated on changes in codes. That’s why our clients see fewer denials and faster payouts.",
+		],
 	},
 	{
-		id: 9,
+		id: 8,
 		title: "Medical Transcription Services",
 		headline:
 			"Accurate documentation of patient records, doctors notes, and clinical reports.",
-		description:
-			"In the vast expanse of the business world, where impressions matter and identities are crafted, branding emerges as the heartbeat of an enterprise.",
 		slug: "Medical Transcription Services",
-		imgPath: "/efficiency.png",
-		service_link: "/services/${service.slug}",
+		imgPath: "/medical.jpg",
+		content: [
+			"At RoyalCom, we treat medical billing and coding as the heartbeat of your practice’s financial health. We don’t just plug in codes — we make sure every detail matches the care provided, which helps avoid claim rejections and delays. You can count on us for accuracy and speed.",
+			"What sets us apart is our hands-on, proactive approach. We take time to understand your specialty and tailor our coding process around your specific needs. This helps you get paid properly for the work you do — without the back-and-forth.",
+			"Other providers may be satisfied with just “good enough.” We go the extra step by double-checking entries, watching for compliance issues, and staying updated on changes in codes. That’s why our clients see fewer denials and faster payouts.",
+		],
 	},
 ];
 
@@ -354,7 +387,7 @@ export const benefitData = [
 		title: "Cost Efficiency",
 		headline:
 			"Maximizing Cost Efficiency for You. Reducing overhead to achieve higher ROI",
-		imgPath: "/finance.jpg",
+		imgPath: "/efficiency.png",
 		content: [
 			"At RoyalCom Solutions, we believe in delivering high-quality services while keeping costs low. Our smart strategies and optimized processes ensure that you get the best value for your investment without any unnecessary expenses.",
 			"Our cost-efficient strategies are designed not just for today but also to support your long-term growth. We offer flexible and scalable solutions tailored to your business needs. At RoyalCom Solutions, we go beyond just offering affordable services—we empower businesses and individuals to maximize their potential without financial strain. Whether you are a startup or an established business, our cost-efficient solutions will help you scale, save, and succeed.",
@@ -439,7 +472,7 @@ export const benefitData = [
 		title: "Data Security",
 		headline:
 			"RoyalCom takes the security of your data very seriously. We utilize modern databases and coding tools that keep your data encrypted and safe",
-		imgPath: "/efficiency.png",
+		imgPath: "/datasec.svg",
 		content: [
 			"At RoyalCom Solutions, we prioritize data security to ensure the confidentiality, integrity, and availability of sensitive healthcare information. Our robust security measures comply with industry standards, safeguarding patient records from breaches and unauthorized access.",
 			"By implementing advanced cybersecurity protocols, RoyalCom Solutions empowers healthcare firms with secure and compliant data management, fostering trust and reliability.",

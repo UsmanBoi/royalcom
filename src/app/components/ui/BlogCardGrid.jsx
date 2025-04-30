@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
+import StaticImg from "./StaticImg";
 import { GoArrowRight } from "react-icons/go";
 
 export const BlogCard = ({ card }) => {
@@ -9,7 +9,7 @@ export const BlogCard = ({ card }) => {
 			key={card.id}
 			className={`w-full max-w-lg h-full backdrop-blur-md rounded bg-gradient-to-r group hover:border-blue-400 bg-lilac-100/50 duration-300 transition-all ease-in-out p-4 2xl:px-6  ${card.spanClass}`}
 		>
-			<Link href={card.type === "blog" ? `/blogs/${card.slug}` : card.urlpath}>
+			<Link href={`/blogs/${card.slug}`}>
 				<div
 					className={`flex-col flex gap-6 xl:gap-8 p-1 h-full justify-between items-center`}
 				>
@@ -17,7 +17,7 @@ export const BlogCard = ({ card }) => {
 						<div
 							className={`relative w-full h-56 xl:min-h-64 2xl:min-h-80 self-end`}
 						>
-							<Image
+							<StaticImg
 								src={card.imgPath} // Use `card.imageSrc` if available
 								alt={`blog ${card.id} Image`}
 								fill

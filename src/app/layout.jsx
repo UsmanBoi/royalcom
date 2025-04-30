@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
 			<body>
 				<main className="h-auto">
 					<Header />
-					<div className="flex mt-24 h-full">{children}</div>
+					<div className="flex mt-20 h-full mb-20">{children}</div>
 					<CTASection />
 					<Footer extraStyle="text-mywhite-50 bg-myblack-50" />
 				</main>

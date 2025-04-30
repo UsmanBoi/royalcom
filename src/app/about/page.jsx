@@ -9,8 +9,8 @@ const AboutPage = () => {
 			<SecHero
 				heading="About RoyalCom"
 				subheading="Royal Com Solutions is a leading organization that offers custom BPO strategies to enhance patient interactions, boost efficiency, and drive revenue growth."
-				img1src="/group.jpg"
-				img2src="/group.jpg"
+				img1src="/building.jpg"
+				img2src="/hospital.jpg"
 			/>
 			<About />
 			<Faqs />

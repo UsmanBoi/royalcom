@@ -1,4 +1,4 @@
-import Image from "next/image";
+import StaticImg from "../../components/ui/StaticImg";
 import { blogData, paddingClass } from "../../constants";
 
 export async function generateStaticParams() {
@@ -32,18 +32,19 @@ const BlogDetailPage = ({ params }) => {
 			<article
 				className={`max-w-full flex items-center justify-center w-full ${paddingClass}`}
 			>
-				<section className="my-4 flex flex-col 2xl:max-w-screen-xl 3xl:max-w-screen-2xl 2xl:pr-40 bg-lilac-100/50 rounded px-10 2xl:px-16 py-10">
-					<div className="flex flex-col gap-2">
-						<h1 className="text-2xl font-bold sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl ">
-							{blog.title}
-						</h1>
-						{<br className="max-sm:hidden" />}
-						<p
-							style={{ wordSpacing: "2px" }}
-							className="text-xl sm:text-2xl md:text-3xl  tracking-tighter"
-						>
-							{blog.description}
-						</p>
+				<section className="my-4 flex flex-col 2xl:max-w-screen-xl 3xl:max-w-screen-2xl 2xl:pr-40 bg-lilac-100/50 rounded px-6 2xl:px-16 py-10">
+					<div className="flex flex-col gap-8">
+						<div className="flex flex-col gap-4">
+							<h1 className="text-2xl font-bold sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl ">
+								{blog.title}
+							</h1>
+							<p
+								style={{ wordSpacing: "2px" }}
+								className="sm:text-lg lg:text-xl 2xl:text-2xl  tracking-tighter"
+							>
+								{blog.description}
+							</p>
+						</div>
 						<div className="flex max-sm:text-sm tracking-tight justify-between w-full font-medium text-white-200">
 							<p className="">{blog.minutes} min read</p>
 							<p className="">{blog.date}</p>
@@ -58,7 +59,7 @@ const BlogDetailPage = ({ params }) => {
 							{firstHalf.map((contentblock) => (
 								<div className="flex flex-col gap-3 py-2" key={contentblock.id}>
 									<h3
-										className={`text-lg md:text-xl xl:text-2xl 2xl:text-3xl capitalize tracking-[-0.04em]`}
+										className={`text-lg md:text-xl xl:text-2xl 2xl:text-3xl capitalize tracking-[-0.04em] font-medium`}
 									>
 										{contentblock.heading}
 									</h3>
@@ -66,12 +67,12 @@ const BlogDetailPage = ({ params }) => {
 								</div>
 							))}
 							{/* Featured Image */}
-							<div className="relative w-full min-h-96">
-								<Image
+							<div className="relative w-full rounded min-h-96">
+								<StaticImg
 									src={blog.featuredImage}
 									alt="blog image"
 									fill
-									className="object-cover"
+									className="object-cover rounded"
 								/>
 							</div>
 							{/* Second HALf */}
@@ -81,7 +82,7 @@ const BlogDetailPage = ({ params }) => {
 									key={contentblock.id}
 								>
 									<h3
-										className={`text-lg md:text-xl xl:text-2xl 2xl:text-3xl capitalize tracking-[-0.04em] `}
+										className={`text-lg md:text-xl xl:text-2xl 2xl:text-3xl capitalize tracking-[-0.04em] font-medium`}
 									>
 										{contentblock.heading}
 									</h3>

@@ -1,7 +1,7 @@
 import React from "react";
 import Bounded from "./ui/Bounded";
 import Link from "next/link";
-import Image from "next/image";
+import StaticImg from "./ui/StaticImg";
 import { GoArrowRight } from "react-icons/go";
 
 const CTASection = () => {
@@ -38,7 +38,7 @@ const CTASection = () => {
 			<div className="absolute left-0 top-0  h-full w-full">
 				<div className="absolute inset-0 -z-0 bg-gradient-to-l from-transparent/30 via-transparent/50 to-transparent/30 bg-blend-screen"></div>
 
-				<Image
+				<StaticImg
 					fill
 					src="/HomeCTA.jpg"
 					alt=""
