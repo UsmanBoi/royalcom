@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { blogContent, blogData } from "../../constants";
+import { blogData, paddingClass } from "../../constants";
 
 export async function generateStaticParams() {
 	// Generate dynamic paths from blogData
@@ -29,27 +29,11 @@ const BlogDetailPage = ({ params }) => {
 
 	return (
 		<>
-			<article className="max-w-full">
-				<div className="flex flex-col gap-5 mb-5">
-					<div className="w-full h-60 lg:h-80 relative ">
-						<Image
-							src={blog.imgPath}
-							alt={blog.title}
-							className="w-full h-full rounded-lg object-cover object-center"
-							fill
-							sizes="(max-width: 640px) 400px, /* Full width for small screens */
-							(max-width: 1280px) 900px, /* Slightly reduced width for medium screens */
-							(max-width: 1920px) 800px, /* Balanced width for larger screens */
-							1000px                      /* For ultra-large screens */"
-						/>
-					</div>
-					<div className="flex max-sm:text-sm  tracking-tight justify-between w-full font-medium text-white-200">
-						<p className="">{blog.minutes} min read</p>
-						<p className="">{blog.date}</p>
-					</div>
-				</div>
-				<section className="my-4">
-					<div className="grid gap-y-4 lg:gap-y-6 sm:grid-cols-[2fr_1fr] xl:grid-cols-[3fr_1fr] ">
+			<article
+				className={`max-w-full flex items-center justify-center w-full ${paddingClass}`}
+			>
+				<section className="my-4 flex flex-col 2xl:max-w-screen-xl 3xl:max-w-screen-2xl 2xl:pr-40 bg-lilac-100/50 rounded px-10 2xl:px-16 py-10">
+					<div className="flex flex-col gap-2">
 						<h1 className="text-2xl font-bold sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl ">
 							{blog.title}
 						</h1>
@@ -60,27 +44,28 @@ const BlogDetailPage = ({ params }) => {
 						>
 							{blog.description}
 						</p>
+						<div className="flex max-sm:text-sm tracking-tight justify-between w-full font-medium text-white-200">
+							<p className="">{blog.minutes} min read</p>
+							<p className="">{blog.date}</p>
+						</div>
 					</div>
 					<hr className="w-40 my-4 sm:my-8" />
-					<div className="flex flex-col gap-2">
+
+					{/* CONTENT BODY */}
+					<div className="flex flex-col gap-8">
 						<>
+							{/* FIRRST HALF */}
 							{firstHalf.map((contentblock) => (
-								<div
-									className=" flex flex-col gap-2 py-2"
-									key={contentblock.id}
-								>
+								<div className="flex flex-col gap-3 py-2" key={contentblock.id}>
 									<h3
-										className={`text-xl text-blue-200  capitalize ${contentblock?.headingClass}`}
+										className={`text-lg md:text-xl xl:text-2xl 2xl:text-3xl capitalize tracking-[-0.04em]`}
 									>
 										{contentblock.heading}
 									</h3>
-									<p
-										className={`sm:text-lg lg:pr-10 ${contentblock?.paraClass}`}
-									>
-										{contentblock.para}
-									</p>
+									<p className={`sm:text-lg lg:pr-10`}>{contentblock.para}</p>
 								</div>
 							))}
+							{/* Featured Image */}
 							<div className="relative w-full min-h-96">
 								<Image
 									src={blog.featuredImage}
@@ -89,21 +74,18 @@ const BlogDetailPage = ({ params }) => {
 									className="object-cover"
 								/>
 							</div>
+							{/* Second HALf */}
 							{secondHalf.map((contentblock) => (
 								<div
 									className=" flex flex-col gap-2 py-2"
 									key={contentblock.id}
 								>
 									<h3
-										className={`text-xl text-blue-200  capitalize ${contentblock?.headingClass}`}
+										className={`text-lg md:text-xl xl:text-2xl 2xl:text-3xl capitalize tracking-[-0.04em] `}
 									>
 										{contentblock.heading}
 									</h3>
-									<p
-										className={`sm:text-lg lg:pr-10 ${contentblock?.paraClass}`}
-									>
-										{contentblock.para}
-									</p>
+									<p className={`sm:text-lg lg:pr-10`}>{contentblock.para}</p>
 								</div>
 							))}
 						</>

@@ -3,58 +3,58 @@
 @tailwind utilities;
 
 h1 {
-  letter-spacing: -0.03em;
-  font-weight: 300;
-  color: #101010; /* Default: Black */
+	letter-spacing: -0.03em;
+	font-weight: 300;
+	color: #101010; /* Default: Black */
 }
 
 h2,
 p,
-span{
-  letter-spacing: -4%;
-  color: "#33ffaa";
+span {
+	letter-spacing: -0.04%;
+	color: "#33ffaa";
 }
 
 :root {
-  --foreground-color: #2a2a2a; /* Default: Black */
-  --background-start-color: #fefefe; /* background start color */
-  --background-end-color: #fefefe; /* background end color */
+	--foreground-color: #2a2a2a; /* Default: Black */
+	--background-start-color: #fefefe; /* background start color */
+	--background-end-color: #fefefe; /* background end color */
 }
 
 html {
-  overflow-x: hidden;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	overflow-x: hidden;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 body {
-  box-sizing: border-box;
-  margin: 0;
-  color: var(--foreground-color);
-  font-family: var(--font-inter); /* Default body font */
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--background-end-color)
-    )
-    var(--background-start-color);
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
-  overflow-x: hidden;
+	box-sizing: border-box;
+	margin: 0;
+	color: var(--foreground-color);
+	font-family: var(--font-inter); /* Default body font */
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			var(--background-end-color)
+		)
+		var(--background-start-color);
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+	overflow-x: hidden;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.text-balance {
+		text-wrap: balance;
+	}
 
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
 
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 }
