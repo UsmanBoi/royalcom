@@ -53,11 +53,11 @@ export default function NewMenu({ links }) {
       </div>
 
       {/* Desktop Menu */}
-      {["lg", "xl", "2xl", "3xl"].includes(screenSize || "") && (
-        <div className="flex gap-4">
+      {["md", "lg", "xl", "2xl", "3xl"].includes(screenSize || "") && (
+        <div className="flex gap-2 lg:gap-4">
           {links.map((item, index) => (
             <button
-              className={`h-10 w-fit min-w-32  transition-all duration-300 ease-in-out ${
+              className={`h-10 w-fit min-w-24 lg:min-w-32 transition-all duration-300 ease-in-out ${
                 open ? "-translate-y-20" : "translate-y-0"
               }`}
               key={index}
@@ -68,7 +68,7 @@ export default function NewMenu({ links }) {
               }}
             >
               <Link href={item.link_url}>
-                <span className="px-5 2xl:text-lg">{item.link_title}</span>
+                <span className="2xl:text-lg">{item.link_title}</span>
               </Link>
             </button>
           ))}
@@ -80,7 +80,7 @@ export default function NewMenu({ links }) {
         title="Menu"
         type="button"
         onClick={toggleMenu}
-        className="group z-50 h-10 w-10 cursor-pointer outline-none transition-all duration-300 ease-in-out lg:hidden max-sm:h-8 max-sm:w-8"
+        className="group z-50 h-10 w-10 cursor-pointer outline-none transition-all duration-300 ease-in-out md:hidden max-sm:h-8 max-sm:w-8"
       >
         <div
           className={`group flex scale-x-110 items-center justify-center transition-all duration-300 ease-in-out ${

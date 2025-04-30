@@ -5,7 +5,7 @@ import Bounded from "../components/ui/Bounded";
 const Services = ({ variation }) => {
   return variation === "homeService" ? (
     <Bounded
-      className={`relative flex h-[36rem] w-screen items-start py-14 sm:h-[40rem] lg:py-20 2xl:justify-center`}
+      className={`relative flex h-[37rem] w-screen items-start pt-[5rem] md:h-[40rem] lg:py-24 2xl:justify-center`}
     >
       <div className="flex w-screen max-w-full 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
         <h1

@@ -9,12 +9,12 @@ const About = () => {
     <div className="relative grid h-full w-full gap-x-32 2xl:gap-x-44 gap-y-10 lg:grid-cols-[1fr_1fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
       <div className="flex h-full w-full flex-col gap-8">
         <h1
-          className={`w-fit text-start text-3xl font-extralight opacity-40 lg:text-4xl 2xl:text-5xl`}
+          className={`w-fit text-start text-3xl font-extralight opacity-40 text-mywhite-50/70 lg:text-4xl 2xl:text-5xl`}
           style={{ wordSpacing: "0.1em" }}
         >
           About Us
         </h1>
-        <div className="relative h-[25rem] w-full lg:min-h-[32rem] max-lg:max-w-[28rem]">
+        <div className="relative h-[25rem] w-full lg:min-h-[32rem] max-lg:max-w-[24rem]">
           <Image
            fill
             src="/about.jpg"
@@ -25,10 +25,10 @@ const About = () => {
       </div>
       <div className="absolute left-1/2 top-0 h-full w-1 bg-gray-500 max-lg:hidden"></div>
 
-      <div className="flex h-full max-w-lg flex-col gap-4 text-sm font-light sm:place-self-end md:text-base lg:max-w-3xl lg:place-self-start max-sm:py-6">
-        <h1 className='text-4xl -ml-0.5 lg:-ml-1.5 font-normal xl:text-6xl 2xl:text-7xl pb-2'>
+      <div className="flex h-full max-w-lg flex-col gap-4 text-sm font-light max-md:pr-16 sm:place-self-end md:text-base lg:max-w-3xl lg:place-self-start max-sm:py-6">
+        <h2 className='text-4xl -ml-0.5 text-mywhite-50 lg:-ml-1.5 font-normal xl:text-6xl 2xl:text-7xl pb-2'>
          Our Story
-        </h1>
+        </h2>
 
         <p className='text-sm leading-relaxed md:text-base 2xl:text-lg'>
         RoyalComSol provides end-to-end revenue cycle solutions—from front desk support to clean back-end billing. Our services include patient scheduling, insurance verification, credentialing, claims processing, and denial management. We help healthcare firms and providers enhance their operational efficiency, reduce the risk of errors, and secure accurate reimbursements with full confidence.

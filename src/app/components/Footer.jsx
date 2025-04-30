@@ -7,12 +7,12 @@ import { paddingClass } from "../constants";
 const Footer = ({ extraStyle = "" }) => {
 	return (
 		<footer
-			className={`${extraStyle} ${paddingClass} grid font-light gap-y-10 max-lg:grid-rows-[1fr_1fr] lg:grid-cols-[1fr_1fr] gap-x-6 px-4 py-8 lg:justify-between lg:pl-10`}
+			className={`${extraStyle} ${paddingClass} grid font-light gap-y-10 max-lg:grid-rows-[1fr_16em] lg:grid-cols-[3fr_2fr] xl:grid-cols-[1fr_1fr] gap-x-10 px-4 py-8 lg:justify-between lg:pl-10`}
 		>
 			<div className="flex flex-col gap-y-12">
 				<div className="flex flex-col gap-5">
 					<Link href="/contact">
-						<h1 className="text-4xl font-semibold text-blue-500">
+						<h1 className="text-4xl font-semibold text-blue-500 -tracking-[0.05em]">
 							RoyalComSol
 						</h1>
 					</Link>
@@ -22,9 +22,9 @@ const Footer = ({ extraStyle = "" }) => {
 					</span>
 				</div>
 
-				<div className="flex w-full gap-x-2">
-					<div className="flex-1 flex flex-col gap-5 max-w-80">
-						<h2 className="text-xl sm:text-2xl lg:text-3xl opacity-50 font-light">
+				<div className="flex w-full lg:justify-between gap-x-4 lg:gap-x-8">
+					<div className="flex-1 flex flex-col gap-5 max-w-56 lg:min-w-40">
+						<h2 className="text-xl md:text-2xl 2xl:text-3xl opacity-50 font-light">
 							Company
 						</h2>
 						<Menu
@@ -33,8 +33,8 @@ const Footer = ({ extraStyle = "" }) => {
 							menutype="mainMenu"
 						/>
 					</div>
-					<div className="flex-1 flex flex-col gap-5 max-lg:hidden">
-						<h2 className="text-xl sm:text-2xl lg:text-3xl opacity-50 font-light">
+					<div className="flex-1 flex flex-col gap-5 w-full max-w-56 lg:min-w-52 max-md:hidden">
+						<h2 className="text-xl md:text-2xl 2xl:text-3xl opacity-50 font-light">
 							Services
 						</h2>
 						<Menu
@@ -43,14 +43,14 @@ const Footer = ({ extraStyle = "" }) => {
 							menutype="servicesMenu"
 						/>
 					</div>
-					<div className="flex-1 flex flex-col gap-y-4 max-w-80">
-						<h2 className="text-xl sm:text-2xl lg:text-3xl opacity-50 font-light">
+					<div className="flex-1 flex flex-col gap-y-5 max-w-64 lg:min-w-56">
+						<h2 className="text-xl md:text-2xl 2xl:text-3xl opacity-50 font-light">
 							Contact
 						</h2>
 						<div className="flex flex-col gap-4 place-self-end">
-							<span className="text-sm lg:text-base">info@royalcomsol.com</span>
-							<span className="text-sm lg:text-base">+92 345 2787638</span>
-							<span className="text-sm lg:text-base">
+							<span className="text-sm xl:text-base">info@royalcomsol.com</span>
+							<span className="text-sm xl:text-base">+92 345 2787638</span>
+							<span className="text-sm xl:text-base">
 								Office-207, 2nd Floor, Al-Sehat Centre, Shahra-e-Faisal,
 								Karachi, Pakistan.
 							</span>
@@ -60,7 +60,9 @@ const Footer = ({ extraStyle = "" }) => {
 			</div>
 
 			{/* News LEtter sectin */}
-			<div className="w-full h-fit flex flex-col md:place-self-end gap-6 max-w-md justify-center self-center">
+			<div className="w-full h-fit flex flex-col lg:place-self-end gap-5 max-w-md justify-center self-center">
+				<div className="flex flex-col gap-2">
+
 				<h2 className="text-2xl lg:text-3xl font-light">
 					Subscribe to our News letter
 				</h2>
@@ -68,6 +70,7 @@ const Footer = ({ extraStyle = "" }) => {
 					Join up our newsletter now to get weekly informative tips in your
 					email.
 				</span>
+				</div>
 				<input
 					type="text"
 					placeholder="Enter email"

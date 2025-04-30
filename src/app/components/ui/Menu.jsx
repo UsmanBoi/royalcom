@@ -11,7 +11,7 @@ export default function Menu({
 	if (pageName === "header") {
 		return (
 			<menu
-				className={`${extraStyle} flex h-24 items-center justify-end lg:justify-center px-4 md:sticky md:top-4 lg:pl-10`}
+				className={`${extraStyle} flex h-[4.5rem] items-center justify-end lg:justify-center px-4 md:sticky md:top-4 lg:pl-10`}
 			>
 				<NewMenu links={menuLinks} />
 			</menu>
@@ -28,7 +28,7 @@ export default function Menu({
 								key={index}
 							>
 								<Link href={item.link_url} className="max-w-fit">
-									<span className="text-sm text-start lg:text-base">
+									<span className="text-sm text-start xl:text-base">
 										{item.link_title}
 									</span>
 								</Link>
@@ -39,7 +39,7 @@ export default function Menu({
 								className={`flex w-full transition-all duration-300 ease-in-out`}
 								key={index}
 							>
-								<span className="text-sm text-start lg:text-base">
+								<span className="text-sm text-start xl:text-base">
 									<Link href={item.link_url} className="max-w-fit">
 										{item.link_title}
 									</Link>

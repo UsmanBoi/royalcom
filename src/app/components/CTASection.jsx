@@ -11,7 +11,7 @@ const CTASection = () => {
 		>
 			<div className={`flex flex-col gap-y-8 py-10 lg:py-20 z-10`}>
 				<h1
-					className={`h-fit w-96 text-3xl sm:w-[38rem] lg:text-4xl 2xl:text-5xl 3xl:text-6xl max-sm:pr-6`}
+					className={`h-fit w-96 text-3xl text-mywhite-50 sm:w-[38rem] lg:text-4xl 2xl:text-5xl 3xl:text-6xl max-sm:pr-6`}
 					style={{ wordSpacing: "0.1em" }}
 				>
 					Let&apos;s Start A Conversation To Discuss Your Next Best Business

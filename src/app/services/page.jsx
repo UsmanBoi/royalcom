@@ -5,12 +5,10 @@ import Bounded from "../components/ui/Bounded";
 
 const ServicePage = () => {
 	return (
-		<>
 			<section className="mb-10">
-				<SecHero heading="Our Services" subheading="A new deep end of relationship. Pinned on an all too rare privilege: the people we introduce you to are the ones who actually conduct your search." img1src="/efficiency.png" img2src="/efficiency.png"/>
+				<SecHero heading="Our Services" subheading="A new deep end of relationship. Pinned on an all too rare privilege: the people we introduce you to are the ones who actually conduct your search." containerClass="pb-3" img1src="/CSR.jpg" img2src="/group.jpg"/>
 				<Services pagetype="services" variation="default"/>
 			</section>
-		</>
 	);
 };
 

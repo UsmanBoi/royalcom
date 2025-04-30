@@ -15,10 +15,10 @@ const Hero = () => (
         className={`flex h-auto w-fit flex-col justify-center place-self-start gap-6 rounded-lg sm:gap-y-10 max-sm:w-96`}
       >
         <div className="flex flex-col gap-y-14 ">
-          <h1 className="text-3xl -ml-0.5 lg:-ml-[0.8%] tracking-[-4%] sm:max-w-[26rem] sm:text-[40px] sm:leading-[120%] md:max-w-[26rem] md:leading-[120%] lg:max-w-[36rem] lg:text-[56px] lg:font-light xl:max-w-[40rem] xl:text-[62px] 2xl:max-w-[52rem] 3xl:text-[80px] max-xs:pr-12 max-sm:w-[22rem] max-sm:leading-[1.35]">
+          <h1 className="text-[36px] -ml-0.5 lg:-ml-[0.8%] tracking-[-4%] sm:max-w-[26rem] sm:text-[40px] md:max-w-[26rem] leading-[120%] lg:max-w-[36rem] lg:text-[56px] lg:font-light xl:max-w-[40rem] xl:text-[62px] 2xl:max-w-[52rem] 3xl:text-[80px] max-xs:pr-12 max-sm:w-[22rem]">
           Increase your medical practice revenue by 30% in 3 months
           </h1>
-          <h2 className="w-full text-sm font-normal sm:max-w-md lg:max-w-xl lg:text-base 2xl:text-lg max-sm:max-w-80">
+          <h2 className="w-full text-sm  sm:max-w-md lg:max-w-xl lg:text-base 2xl:text-lg max-sm:max-w-80">
           RoyalComSol specializes in medical billing and Revenue Cycle Management (RCM), providing services including clean billing using modern coding tools, accurate reimbursements, reduced claim denials, risk of errors and improve your overall revenue system.
           </h2>
         </div>
