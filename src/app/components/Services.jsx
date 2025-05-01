@@ -15,7 +15,7 @@ const Services = ({ variation, containerClass = "" }) => {
 				<ServiceCard
 					pagetype="services"
 					cardData={serviceData}
-					gridClass="absolute w-screen bottom-0 left-0 max-w-[120em] w-full"
+					gridClass="absolute w-screen bottom-0 left-0 2xl:min-w-[130em] w-full"
 					cardClass="flex h-full min-h-[25rem] w-full max-w-[355px] flex-shrink-0 snap-start flex-col items-center justify-between gap-y-2 border border-myblack-150/30 transition-all duration-300 ease-in-out sm:max-w-sm xl:max-w-[400px] 2xl:max-w-md 3xl:max-w-lg"
 				/>
 			</div>
@@ -33,7 +33,7 @@ const Services = ({ variation, containerClass = "" }) => {
 				<ServiceCard
 					pagetype="services"
 					cardData={serviceData}
-					gridClass="absolute w-screen bottom-0 left-0 max-w-[120em] w-full"
+					gridClass="absolute w-screen bottom-0 left-0 2xl:min-w-[130em] w-full"
 					cardClass="flex h-full min-h-[25rem] w-full max-w-[355px] flex-shrink-0 snap-start flex-col items-center justify-between gap-y-2 border border-myblack-150/30 transition-all duration-300 ease-in-out sm:max-w-sm xl:max-w-[400px] 2xl:max-w-md 3xl:max-w-lg"
 				/>
 			</div>

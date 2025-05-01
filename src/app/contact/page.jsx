@@ -7,8 +7,8 @@ const contactPage = () => {
 			<SecHero
 				heading="it's time to connect"
 				subheading="Call at +92 345 2787638 anytime for a free consultation. Drop a message if you have any concerns."
-				img1src="/telehealth.jpg"
-				img2src="/group.jpg"
+				img1src="/building3.jpg"
+				img2src="/stairs2.jpg"
 			/>
 		</div>
 	);

@@ -9,8 +9,8 @@ const BlogPage = () => {
 			<SecHero
 				heading="Blogs & articles"
 				subheading=""
-				img1src="/RCM.jpg"
-				img2src="/CSR.jpg"
+				img1src="/finance.jpg"
+				img2src="/nurse.jpg"
 			/>
 			<div
 				className={`flex w-screen flex-col justify-center ${paddingClass} xl:items-center`}

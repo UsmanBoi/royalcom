@@ -36,7 +36,7 @@ export const BlogCard = ({ card }) => {
 						<div className="w-full flex flex-col gap-2">
 							<div className="flex w-full justify-between">
 								<h2
-									className={`group-hover:text-blue-400 min-h-14 2xl:text-lg duration-300 transition-all ease-in-out `}
+									className={`group-hover:text-blue-400 min-h-14 2xl:text-lg duration-300 capitalize font-normal transition-all ease-in-out `}
 								>
 									{card.title}
 								</h2>
@@ -45,7 +45,7 @@ export const BlogCard = ({ card }) => {
 								/>
 							</div>
 							<div
-								className={`h-[1.3px] w-80 bg-myblack-200 outline-0 sm:w-full `}
+								className={`h-[1.25px] w-80 bg-myblack-200 outline-0 sm:w-full `}
 							/>
 							<div className="flex justify-between w-full">
 								<span>{card.date}</span>

@@ -22,7 +22,7 @@ const BenefitCard = ({ cardData }) => {
 							{benefit.headline}
 						</span>
 					</div>
-					<div className="relative h-[10rem] rounded lg:h-[13rem] 2xl:h-[15rem]">
+					<div className="relative h-[8rem] max-sm:w-32 place-self-end  self-center rounded lg:h-[13rem] 2xl:h-[15rem]">
 						<StaticImg
 							fill
 							alt="alt text"
