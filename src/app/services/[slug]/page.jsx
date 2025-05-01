@@ -51,14 +51,10 @@ const serviceDetailPage = ({ params }) => {
 					))}
 					<div className="w-full h-60 lg:h-80 relative max-sm:hidden sm:col-start-1 sm:row-start-2">
 						<StaticImg
+							// fill
 							src={service.imgPath}
 							alt={service.title}
 							className="w-full h-full rounded-lg object-cover object-center "
-							fill
-							sizes="(max-width: 640px) 400px, /* Full width for small screens */
-						(max-width: 1280px) 900px, /* Slightly reduced width for medium screens */
-						(max-width: 1920px) 800px, /* Balanced width for larger screens */
-						1000px                      /* For ultra-large screens */"
 						/>
 					</div>
 				</div>

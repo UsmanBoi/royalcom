@@ -41,7 +41,6 @@ const Hero = () => (
 						alt="hero Image describing business environment"
 						width={300}
 						height={300}
-						priority
 						src="/building2.jpg"
 						className="absolute right-0 top-2 lg:top-3 h-[19rem] w-[14.25rem] rounded object-cover object-center lg:w-[14.25rem] 2xl:h-[23.5rem] 2xl:w-[17.5rem]"
 					/>
@@ -50,7 +49,6 @@ const Hero = () => (
 						alt="hero Image describing telesupport services"
 						width={300}
 						height={300}
-						priority
 						src="/group.jpg"
 						className="absolute bottom-0 left-2 sm:left-0 lg:left-2 h-[14.25rem] w-[13rem] lg:w-[14.25rem] 2xl:w-[17.5rem] 2xl:h-[17.5rem] rounded object-cover object-center"
 					/>

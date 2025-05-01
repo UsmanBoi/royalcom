@@ -11,23 +11,26 @@ const Faqs = () => {
 			<div
 				className={`grid gap-y-10 py-5 sm:gap-y-14 lg:grid-cols-2 lg:py-12 xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl sm:py-10 max-sm:pb-10`}
 			>
-				<div className="flex w-full flex-col justify-between gap-y-4 self-start sm:h-full">
+				<div className="flex w-full flex-col justify-between gap-y-5 sm:gap-y-4 self-start sm:h-full">
 					<h1
-						className={`h-fit leading-[120%] w-[28rem] md:w-[36rem] text-5xl md:text-[52px] lg:text-6xl  xl:text-7xl font-light capitalize`}
+						className={`h-fit leading-[120%] w-[28rem] md:w-[36rem] text-5xl md:text-[52px] lg:text-6xl  xl:text-7xl  capitalize`}
 						style={{ wordSpacing: "0.1em" }}
 					>
 						Frequently Asked Questions
 					</h1>
-					<div className="ml-2 flex w-fit items-center text-2xl transition-all duration-300 ease-in-out xl:text-3xl">
-						<button type="button" className={`w-fit`}>
-							<Link href="/">
+					<div className="flex max-w-fit pl-1.5 items-center text-2xl transition-all duration-300 ease-in-out xl:text-3xl">
+						<Link href="/about">
+							<button
+								type="button"
+								className={`w-fit flex min-w-fit items-center `}
+							>
 								{/* Button text */}
-								<span className="text-lg lg:text-xl xl:text-2xl">View All</span>
-							</Link>
-						</button>
-						<GoArrowRight
-							className={`w-12 transition-all duration-300 ease-in-out`}
-						/>
+								<span className="text-lg">View All</span>
+								<GoArrowRight
+									className={`w-12 transition-all duration-300 ease-in-out`}
+								/>
+							</button>
+						</Link>
 					</div>
 				</div>
 
@@ -47,19 +50,16 @@ export const FaqCard = ({ cardData }) => {
 	};
 
 	return (
-		<div className="w-full space-y-4 lg:px-2 max-lg:pl-2 max-lg:pr-4 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
+		<div className="max-sm:max-w-[26em] space-y-4 pl-2 sm:px-2 max-md:pr-8 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
 			{cardData.map((faq, index) => (
-				<div
-					key={index}
-					className="border-b lg:-mt-3 border-gray-300 py-2 font-normal"
-				>
+				<div key={index} className="border-b lg:-mt-3 border-gray-300 py-2 ">
 					<button
 						type="button"
 						onClick={() => toggleItem(index)}
-						className="flex w-96 sm:w-full items-center justify-between py-3 text-left "
+						className="flex w-[23em] sm:w-full items-center justify-between py-3 text-left "
 					>
 						<span
-							className={`sm:text-lg max-w-80 sm:max-w-full lg:text-xl xl:text-2xl 2xl:text-[26px] ${openIndex === index ? "text-blue-600" : ""}`}
+							className={`sm:text-lg max-w-80 sm:max-w-full font-normal lg:text-xl xl:text-2xl 2xl:text-[26px] ${openIndex === index ? "text-blue-600" : ""}`}
 						>
 							{faq.question}
 						</span>
@@ -79,7 +79,9 @@ export const FaqCard = ({ cardData }) => {
 								: "mt-0 max-h-0 text-sm leading-tight opacity-0"
 						}`}
 					>
-						<p className="sm:text-lg  xl:text-xl">{faq.answer}</p>
+						<p className="text-sm sm:text-base xl:text-lg 2xl:text-xl pr-8">
+							{faq.answer}
+						</p>
 					</div>
 				</div>
 			))}

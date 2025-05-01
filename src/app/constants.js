@@ -7,7 +7,7 @@ export const blogData = [
 		slug: "importance-of-credentialing",
 		imgPath: "/group.jpg",
 		date: "12-04-2025",
-		minutes: 5,
+		minutes: 4,
 		featuredImage: "/RCM.jpg",
 		content: [
 			{
@@ -55,7 +55,7 @@ export const blogData = [
 		slug: "importance-of-medical-coding",
 		imgPath: "/blog1.jpg",
 		date: "24-02-2024",
-		minutes: 15,
+		minutes: 5,
 		featuredImage: "/RCM.jpg",
 		content: [
 			{
@@ -97,8 +97,8 @@ export const blogData = [
 			"This guide will explain the steps involved in streamlining the revenue cycle, from the front office to the backend, and offer practical tips to help small practices improve their overall financial management.s",
 		slug: "benefits-of-RCM",
 		imgPath: "/blog2.jpg",
-		date: "24-02-2024",
-		minutes: 12,
+		date: "19-08-2024",
+		minutes: 8,
 		featuredImage: "/finance.jpg",
 		content: [
 			{
@@ -150,8 +150,8 @@ export const blogData = [
 			"This guide will explain several important medical billing solutions that your firm needs to progress and operate efficiently",
 		slug: "medical-billing-solutions",
 		imgPath: "/hospital.jpg",
-		date: "24-02-2024",
-		minutes: 5,
+		date: "11-02-2025",
+		minutes: 6,
 		featuredImage: "/hospital.jpg",
 		content: [
 			{
@@ -203,7 +203,7 @@ export const blogData = [
 			"This guide will explain the effect of medical billing in reducing the amount of claim denials.",
 		slug: "benefits-of-medical-billing",
 		imgPath: "/claim.jpg",
-		date: "24-02-2024",
+		date: "20-12-2024",
 		minutes: 5,
 		featuredImage: "/RCM.jpg",
 		content: [
@@ -246,8 +246,8 @@ export const blogData = [
 			"In this article, we will learn how to review important aspects like claim management, KPIs of your firm that helps in optimizing your revenue cycle.",
 		slug: "review-your-RCM",
 		imgPath: "/data.jpg",
-		date: "24-02-2024",
-		minutes: 5,
+		date: "24-01-2025",
+		minutes: 6,
 		featuredImage: "/RCM.jpg",
 		content: [
 			{

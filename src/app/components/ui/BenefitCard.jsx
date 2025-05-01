@@ -24,7 +24,7 @@ const BenefitCard = ({ cardData }) => {
 					</div>
 					<div className="relative h-[8rem] max-sm:w-32 place-self-end  self-center rounded lg:h-[13rem] 2xl:h-[15rem]">
 						<StaticImg
-							fill
+							// fill
 							alt="alt text"
 							src={benefit.imgPath}
 							className="h-full w-full rounded object-contain object-center"

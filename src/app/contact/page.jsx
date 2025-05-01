@@ -6,7 +6,7 @@ const contactPage = () => {
 		<div>
 			<SecHero
 				heading="it's time to connect"
-				subheading="Call at +92 345 2787638 anytime for a free consultation. Drop a message if you have any concerns."
+				subheading="Call at +92 313 8764508 anytime for a free consultation. Drop a message if you have any concerns."
 				img1src="/building3.jpg"
 				img2src="/stairs2.jpg"
 			/>

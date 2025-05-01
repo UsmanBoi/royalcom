@@ -34,11 +34,11 @@ const Benefits = ({ variation, containerClass }) => {
 				</h1>
 
 				<BenefitCard cardData={benefitData} />
-				<div className="flex min-w-96 items-center text-2xl transition-all duration-300 ease-in-out xl:text-3xl">
+				<div className="flex max-w-fit items-center text-2xl transition-all duration-300 ease-in-out xl:text-3xl">
 					<Link href="/benefits">
 						<button
 							type="button"
-							className={`w-fit flex min-w-96 items-center`}
+							className={`w-fit flex min-w-80 pl-1 items-center`}
 						>
 							{/* Button text */}
 							<span className="text-lg">View All</span>

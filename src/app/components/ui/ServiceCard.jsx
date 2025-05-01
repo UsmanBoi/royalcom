@@ -200,7 +200,7 @@ const ServiceCard = ({
 								</div>
 
 								<StaticImg
-									fill
+									// fill
 									alt="alt text"
 									src={service.imgPath}
 									className={`absolute left-0 top-0 -z-10 transition-all duration-200 ease-linear ${

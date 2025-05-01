@@ -18,15 +18,9 @@ export const BlogCard = ({ card }) => {
 							className={`relative w-full h-56 xl:min-h-64 2xl:min-h-80 self-end`}
 						>
 							<StaticImg
+								// fill
 								src={card.imgPath} // Use `card.imageSrc` if available
 								alt={`blog ${card.id} Image`}
-								fill
-								sizes="
-                    (max-width: 640px) 100vw, /* Full width for small screens */
-                    (max-width: 1280px) 80vw, /* Slightly reduced width for medium screens */
-                    (max-width: 1920px) 60vw, /* Balanced width for larger screens */
-                    50vw                      /* For ultra-large screens */
-                "
 								className=" duration-300 transition-all ease-in-out object-cover object-center  group-hover:scale-[1.025]"
 							/>
 						</div>

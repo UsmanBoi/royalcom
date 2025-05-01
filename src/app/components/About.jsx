@@ -13,10 +13,10 @@ const About = () => {
 						About Us
 					</h1>
 					<StaticImg
-						fill
+						// fill
 						src="/about.jpg"
 						alt=""
-						className="h-[25rem] rounded object-cover object-center lg:h-[32rem]"
+						className="h-[25rem] max-lg:max-w-[25em] rounded object-cover object-center lg:h-[32rem]"
 					/>
 				</div>
 				<div className="absolute left-1/2 top-0 h-full w-1 bg-gray-500 max-lg:hidden"></div>

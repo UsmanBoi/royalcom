@@ -39,7 +39,7 @@ const CTASection = () => {
 				<div className="absolute inset-0 -z-0 bg-gradient-to-l from-transparent/30 via-transparent/50 to-transparent/30 bg-blend-screen"></div>
 
 				<StaticImg
-					fill
+					// fill
 					src="/HomeCTA.jpg"
 					alt=""
 					className="h-full w-full -z-10 object-cover object-top"

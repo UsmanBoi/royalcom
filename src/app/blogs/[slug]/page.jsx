@@ -71,7 +71,7 @@ const BlogDetailPage = ({ params }) => {
 								<StaticImg
 									src={blog.featuredImage}
 									alt="blog image"
-									fill
+									// fill
 									className="object-cover rounded"
 								/>
 							</div>
