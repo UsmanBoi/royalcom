@@ -141,7 +141,7 @@ const ServiceCard = ({
 						<div
 							key={index}
 							ref={(el) => (cardRefs.current[index] = el)}
-							className={`group ${cardClass} snap-center min-w-[20rem] max-w-sm transition-all duration-300 ease-in-out ${
+							className={`group ${cardClass} snap-center max-w-[370px] transition-all duration-300 ease-in-out ${
 								isActive
 									? "bg-gradient-to-t from-blue-400/30 via-blue-400/20 to-transparent"
 									: "bg-lilac-100/80"
