@@ -8,7 +8,7 @@ const BlogPage = () => {
 		<section className="">
 			<SecHero
 				heading="Blogs & articles"
-				subheading=""
+				subheading="Read about the latest trends in the health industry and learn how you can keep up with the industry best practices."
 				img1src="/finance.jpg"
 				img2src="/nurse.jpg"
 			/>

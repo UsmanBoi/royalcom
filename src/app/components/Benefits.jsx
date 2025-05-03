@@ -52,8 +52,8 @@ const Benefits = ({ variation, containerClass }) => {
 		</Bounded>
 	) : variation === "default" ? (
 		<Bounded className={`${containerClass} relative`}>
-			<div className="grid relative w-full min-h-[45em]  xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
-				<div className="flex max-sm:flex-col max-sm:gap-y-5 justify-between self-start absolute -left-2 w-full -top-24 lg:-top-20 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
+			<div className="grid relative w-full min-h-[45em] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
+				<div className="flex max-sm:flex-col max-sm:gap-y-5 justify-between self-start absolute -left-2 w-full -top-24 lg:-top-10 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
 					<h1
 						className={`${secHeading} h-fit max-sm:max-w-[28rem]`}
 						style={{ wordSpacing: "0.1em" }}
@@ -72,7 +72,7 @@ const Benefits = ({ variation, containerClass }) => {
 				{/* BENEFIIT CONTENT AND IMAGE */}
 				{benefitData.map((benefit, id) => (
 					<div
-						className={`flex absolute top-12 md:top-6 w-full my-8 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl  gap-y-12 ${
+						className={`flex absolute top-12 md:top-6 w-full my-8 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl gap-y-12 ${
 							activeIndex === id ? "" : "translate-x-80 scale-x-0 opacity-0"
 						} transition-all duration-300 ease-in-out`}
 						key={id}

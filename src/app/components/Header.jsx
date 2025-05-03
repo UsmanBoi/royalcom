@@ -12,7 +12,7 @@ export default async function Header() {
 			<Link
 				href="/"
 				aria-label="Home Button"
-				className="text-lg w-fit font-semibold text-blue-500"
+				className="text-lg w-fit font-semibold text-myblue-50"
 			>
 				<span className="tracking-[-0.035em]">RoyalComSol</span>
 			</Link>

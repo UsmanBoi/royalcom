@@ -388,7 +388,7 @@ export const benefitData = [
 		title: "Cost Efficiency",
 		headline:
 			"Maximizing Cost Efficiency for You. Reducing overhead to achieve higher ROI",
-		imgPath: "/efficiency.png",
+		imgPath: "/cost.svg",
 		content: [
 			"At RoyalCom Solutions, we believe in delivering high-quality services while keeping costs low. Our smart strategies and optimized processes ensure that you get the best value for your investment without any unnecessary expenses.",
 			"Our cost-efficient strategies are designed not just for today but also to support your long-term growth. We offer flexible and scalable solutions tailored to your business needs. At RoyalCom Solutions, we go beyond just offering affordable services—we empower businesses and individuals to maximize their potential without financial strain. Whether you are a startup or an established business, our cost-efficient solutions will help you scale, save, and succeed.",

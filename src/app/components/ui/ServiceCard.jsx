@@ -16,6 +16,7 @@ const ServiceCard = ({
 	const scrollContainerRef = useRef(null);
 	const [activeIndex, setActiveIndex] = useState(0);
 	const [hoveredIndex, setHoveredIndex] = useState(null);
+	const cardRefs = useRef([]);
 
 	const visibleCards =
 		screenSize === "xxs" ||
@@ -31,64 +32,88 @@ const ServiceCard = ({
 
 	const dataToMap = pagetype === "homepage" ? visibleCards : cardData;
 
-	const scrollAmount =
-		screenSize === "xxs" ||
-		screenSize === "xs" ||
-		screenSize === "sm" ||
-		screenSize === "md"
-			? 380
-			: 500; // You can adjust this value based on card width
+	// Reset card refs whenever dataToMap changes
+	useEffect(() => {
+		cardRefs.current = cardRefs.current.slice(0, dataToMap.length);
+	}, [dataToMap]);
 
 	useEffect(() => {
 		const handleResize = () => setScreenSize(getCurrentScreenSize());
 		handleResize();
 		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
 
-	useEffect(() => {
-		const el = scrollContainerRef.current;
-		if (!el) return;
+		// Set up scroll snap detection
+		const scrollContainer = scrollContainerRef.current;
+		if (scrollContainer) {
+			const handleScroll = () => {
+				// Debounce for performance
+				if (scrollContainer.scrollLeft === 0) {
+					setActiveIndex(0);
+					return;
+				}
 
-		// Only add scroll hijack if it's a touch device and screen is small
-		const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
-		const isSmallScreen = window.innerWidth <= 768;
+				// Find which card is most visible in the viewport
+				const containerLeft = scrollContainer.scrollLeft;
+				const containerWidth = scrollContainer.clientWidth;
+				const containerCenter = containerLeft + containerWidth / 2;
 
-		if (!(isTouchDevice && isSmallScreen)) return;
+				let closestCardIndex = 0;
+				let closestDistance = Infinity;
 
-		const handleWheel = (e) => {
-			if (e.deltaY === 0) return;
-			e.preventDefault();
-			el.scrollTo({
-				left: el.scrollLeft + e.deltaY * 4,
-				behavior: "smooth",
-			});
-		};
+				cardRefs.current.forEach((cardRef, index) => {
+					if (!cardRef) return;
 
-		el.addEventListener("wheel", handleWheel, { passive: false });
+					const cardLeft = cardRef.offsetLeft;
+					const cardWidth = cardRef.offsetWidth;
+					const cardCenter = cardLeft + cardWidth / 6;
 
-		return () => el.removeEventListener("wheel", handleWheel);
-	}, []);
+					const distance = Math.abs(containerCenter - cardCenter);
+					if (distance < closestDistance) {
+						closestDistance = distance;
+						closestCardIndex = index;
+					}
+				});
 
-	const handlenext = () => {
-		setActiveIndex((prev) => (prev + 1) % cardData.length);
+				setActiveIndex(closestCardIndex);
+			};
 
-		if (scrollContainerRef.current) {
-			scrollContainerRef.current.scrollBy({
-				left: scrollAmount,
-				behavior: "smooth",
-			});
+			scrollContainer.addEventListener("scroll", handleScroll);
+			return () => {
+				scrollContainer.removeEventListener("scroll", handleScroll);
+				window.removeEventListener("resize", handleResize);
+			};
 		}
+	}, []);
+
+	const scrollToCard = (index) => {
+		const cardRef = cardRefs.current[index];
+		if (!cardRef || !scrollContainerRef.current) return;
+
+		// Calculate position to center the card in the container
+		const container = scrollContainerRef.current;
+		const containerWidth = container.clientWidth;
+		const cardLeft = cardRef.offsetLeft;
+		const cardWidth = cardRef.offsetWidth;
+
+		// Center the card in the view
+		const scrollPosition = cardLeft - containerWidth / 2 + cardWidth / 2;
+
+		container.scrollTo({
+			left: scrollPosition,
+			behavior: "smooth",
+		});
+
+		setActiveIndex(index);
 	};
 
-	const handleprev = () => {
-		setActiveIndex((prev) => (prev - 1 + cardData.length) % cardData.length);
-		if (scrollContainerRef.current) {
-			scrollContainerRef.current.scrollBy({
-				left: -scrollAmount,
-				behavior: "smooth",
-			});
-		}
+	const handleNext = () => {
+		const newIndex = (activeIndex + 1) % dataToMap.length;
+		scrollToCard(newIndex);
+	};
+
+	const handlePrev = () => {
+		const newIndex = (activeIndex - 1 + dataToMap.length) % dataToMap.length;
+		scrollToCard(newIndex);
 	};
 
 	if (pagetype !== "homePage" && pagetype !== "services") return null;
@@ -96,17 +121,17 @@ const ServiceCard = ({
 	return (
 		<div className="">
 			<div className="flex justify-between lg:h-20 xl:h-24 items-center max-w-32 sm:gap-x-6 w-full max-h-32">
-				<button onClick={handleprev}>
+				<button onClick={handlePrev}>
 					<GoArrowLeft className="text-4xl sm:text-5xl w-12" />
 				</button>
-				<button onClick={handlenext}>
+				<button onClick={handleNext}>
 					<GoArrowRight className="text-4xl sm:text-5xl w-12" />
 				</button>
 			</div>
 
 			<div
 				ref={scrollContainerRef}
-				className={`${gridClass} scroll-snap-x mandatory no-scrollbar flex max-w-full snap-start place-items-center justify-self-center overflow-x-auto overflow-y-hidden scroll-smooth`}
+				className={`${gridClass} flex max-w-full place-items-center justify-self-center overflow-x-auto overflow-y-hidden scroll-smooth snap-x snap-mandatory no-scrollbar`}
 			>
 				{dataToMap.map((service, index) => {
 					const isActive = index === activeIndex;
@@ -115,10 +140,11 @@ const ServiceCard = ({
 					return (
 						<div
 							key={index}
-							className={`group ${cardClass} min-w-[20rem] max-w-sm transition-all duration-300 ease-in-out ${
+							ref={(el) => (cardRefs.current[index] = el)}
+							className={`group ${cardClass} snap-center min-w-[20rem] max-w-sm transition-all duration-300 ease-in-out ${
 								isActive
-									? "bg-gradient-to-t from-blue-400/30 via-blue-400/20 to-transparent "
-									: "bg-lilac-100/80 "
+									? "bg-gradient-to-t from-blue-400/30 via-blue-400/20 to-transparent"
+									: "bg-lilac-100/80"
 							}`}
 							onMouseEnter={() => {
 								setHoveredIndex(index);
@@ -153,7 +179,7 @@ const ServiceCard = ({
 											className={`w-12 text-2xl transition-all duration-300 ease-in-out ${
 												isActive || isHovered
 													? "text-mywhite-50"
-													: "text-blue-500"
+													: "text-myblue-50"
 											}`}
 											style={
 												isActive || isHovered
@@ -189,7 +215,7 @@ const ServiceCard = ({
 									</p>
 									<Link
 										href={`/services/${service.slug}`}
-										className={`w-fit text-mywhite-50 transition-all duration-300 ease-in-out hover:text-blue-500 ${
+										className={`w-fit text-mywhite-50 transition-all duration-300 ease-in-out hover:text-myblue-50 ${
 											isActive || isHovered
 												? "translate-y-0.5 opacity-100"
 												: "translate-y-10 opacity-0"
@@ -200,11 +226,10 @@ const ServiceCard = ({
 								</div>
 
 								<StaticImg
-									// fill
 									alt="alt text"
 									src={service.imgPath}
 									className={`absolute left-0 top-0 -z-10 transition-all duration-200 ease-linear ${
-										isActive || isActive
+										isActive || isHovered
 											? "translate-y-0 opacity-100"
 											: "pointer-events-none translate-y-5 opacity-0"
 									} h-[25rem] w-full object-cover object-center`}
@@ -214,7 +239,7 @@ const ServiceCard = ({
 					);
 				})}
 
-				<div className="flex min-w-[14em] w-full items-center justify-center text-2xl transition-all duration-300 ease-in-out hover:scale-105 xl:text-3xl">
+				<div className="flex min-w-[14em] w-full items-center justify-center text-2xl transition-all duration-300 ease-in-out hover:scale-105 xl:text-3xl snap-end">
 					<Link href="/services">
 						<span>View All Services</span>
 					</Link>

@@ -13,7 +13,7 @@ const Footer = ({ extraStyle = "" }) => {
 				{/* WEBSITE NAME WITH EXCERPT */}
 				<div className="flex flex-col gap-5 place-self-start">
 					<Link href="/contact">
-						<h1 className="text-3xl sm:text-4xl font-semibold text-blue-500 -tracking-[0.05em]">
+						<h1 className="text-3xl sm:text-4xl font-semibold text-myblue-50 -tracking-[0.05em]">
 							RoyalComSol
 						</h1>
 					</Link>

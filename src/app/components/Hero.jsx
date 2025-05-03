@@ -6,21 +6,23 @@ import StaticImg from "./ui/StaticImg";
 const Hero = () => (
 	<Bounded className="flex w-screen flex-col justify-center pb-16 pt-7 sm:pt-10 md:min-h-[30em] lg:min-h-[40em] md:flex-row md:items-center">
 		{/* GRID */}
-		<div className="relative grid h-full w-full gap-y-7 md:min-h-[26em] md:grid-cols-[2fr_22rem] max-lg:gap-x-4 lg:grid-cols-[2fr_1fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:pb-20 2xl:pt-4 3xl:max-w-screen-2xl max-md:grid-rows-[1fr_1fr]">
+		<div className="relative grid h-full w-full gap-y-6 md:min-h-[26em] md:grid-cols-[2fr_22rem] max-lg:gap-x-4 lg:grid-cols-[2fr_1fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 2xl:pb-20 2xl:pt-4 3xl:max-w-screen-2xl max-md:grid-rows-[1fr_1fr]">
 			{/* Content */}
 			<div
-				className={`flex relative h-auto w-fit flex-col justify-center place-self-start gap-y-8 rounded-lg md:gap-y-20 max-sm:w-96`}
+				className={`flex relative h-auto w-fit flex-col justify-center place-self-start gap-y-9 rounded-lg md:gap-y-20 max-sm:w-96`}
 			>
 				{/* <div
-					className={`absolute -left-2 h-auto top-1/2 -z-10 mr-20 flex  w-full max-w-[30rem] -translate-y-1/2 flex-col justify-center gap-2 rounded-lg bg-gradient-to-br from-blue-400/50  to-blue-300/15 p-6 shadow-lg backdrop-blur-[6px] sm:gap-4 lg:left-16 lg:mr-0 lg:max-w-[36rem] xl:max-w-[45rem] 2xl:max-w-[52rem]`}
+					className={`absolute  top-1/2 -z-10  flex max-sm:w-screen min-w-full min-h-full -translate-y-1/2 flex-col justify-center gap-2 rounded-lg bg-gradient-to-r from-blue-400/30  via-blue-100  to-blue-50 py-4 box-content shadow-lg backdrop-blur-[6px] sm:gap-4 -left-[5%]`}
 				/> */}
 				<div className="flex w-fit items-center">
 					<h1 className="text-[36px] -ml-0.5 lg:-ml-[0.8%] tracking-[-4%] sm:max-w-[26rem] sm:text-[40px] md:max-w-[26rem] leading-[120%] lg:max-w-[36rem] lg:text-[56px] lg:font-light xl:max-w-[40rem] xl:text-[62px] 2xl:max-w-[52rem] 3xl:text-[80px] max-xs:pr-12 max-sm:w-[22rem]">
-						Increase your medical practice revenue by 30% in 3 months
+						Increase your medical practice revenue by
+						<span className="text-[#236BFE] tracking-tighter"> 30% </span>in 3
+						months
 					</h1>
 				</div>
 				{/* content with button */}
-				<div className="flex flex-col gap-y-2">
+				<div className="flex flex-col gap-y-2.5">
 					<h2 className="w-full text-sm sm:max-w-md lg:max-w-xl lg:text-base 2xl:text-lg max-sm:max-w-80 font-normal">
 						Royal Com Solutions is a leading organization that offers custom BPO
 						strategies and services including clean billing using modern coding,
@@ -32,9 +34,7 @@ const Hero = () => (
 						risk of errors and improve your overall revenue system. */}
 					</h2>
 					<Link href="/contact">
-						<button
-							className={`flex h-10 w-fit items-center gap-1 font-medium`}
-						>
+						<button className={`flex h-10 w-fit items-center gap-1 font-bold`}>
 							<span className="pl-0.5 ">Get Started Today</span>
 							<GoArrowRight className="w-8 text-2xl" />
 						</button>
@@ -43,10 +43,10 @@ const Hero = () => (
 			</div>
 
 			{/* Hero Images  */}
-			<div className="relative flex min-h-80 w-full justify-end max-sm:min-h-[24rem] max-sm:items-end">
+			<div className="relative flex min-h-80 w-full justify-center xs:justify-end max-sm:min-h-[24rem] max-sm:items-end">
 				{/* <div className="absolute inset-0 z-0 bg-gradient-to-l from-mywhite-200/5 via-mywhite-200/10 to-mywhite-200/20 bg-blend-screen"></div> */}
 
-				<div className="relative max-lg:min-h-full lg:max-h-[27rem] 2xl:max-h-[30rem] w-full max-w-sm 2xl:max-w-md">
+				<div className="relative max-lg:min-h-full lg:max-h-[27rem] 2xl:max-h-[30rem] w-full max-w-[300px] sm:max-w-sm 2xl:max-w-md">
 					<StaticImg
 						alt="hero Image describing business environment"
 						width={300}

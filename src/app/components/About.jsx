@@ -3,8 +3,8 @@ import StaticImg from "./ui/StaticImg";
 
 const About = () => {
 	return (
-		<div className="flex 2xl:min-h-[50rem] h-auto w-full  items-center justify-center bg-myblack-150 px-4 py-8 text-mywhite-50 sm:py-16 md:px-6 lg:px-12 xl:px-16 2xl:py-[4.5rem]">
-			<div className="relative grid h-full w-full gap-x-32 2xl:gap-x-44 gap-y-10 lg:grid-cols-[1fr_1fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
+		<div className="flex 2xl:min-h-[50rem] h-auto w-full items-center xs:justify-center bg-myblack-150 px-4 py-8 text-mywhite-50 sm:py-16 md:px-6 lg:px-12 xl:px-16 2xl:py-[4.5rem]">
+			<div className="relative grid h-full w-full max-xs:max-w-[22em] gap-x-32 2xl:gap-x-44 gap-y-10 lg:grid-cols-[1fr_1fr] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
 				<div className="flex h-full w-full flex-col gap-8">
 					<h1
 						className={`w-fit text-start text-3xl font-extralight opacity-40 text-mywhite-50/70 lg:text-4xl 2xl:text-5xl`}
@@ -16,12 +16,12 @@ const About = () => {
 						// fill
 						src="/about.jpg"
 						alt=""
-						className="h-[25rem] max-lg:max-w-[25em] rounded object-cover object-center lg:h-[32rem]"
+						className="h-[25rem] max-xs:w-fit xs:max-w-[24em] lg:max-w-full rounded object-cover object-center lg:h-[32rem]"
 					/>
 				</div>
 				<div className="absolute left-1/2 top-0 h-full w-1 bg-gray-500 max-lg:hidden"></div>
 
-				<div className="flex h-full max-w-lg flex-col gap-4 text-sm font-light max-md:pr-16 sm:place-self-end md:text-base lg:max-w-3xl lg:place-self-start max-sm:py-6">
+				<div className="flex h-full w-full xs:max-w-md flex-col gap-4 text-sm font-light xs:pr-16 sm:pr-0 sm:place-self-end md:text-base lg:max-w-3xl lg:place-self-start max-sm:py-6">
 					<h2 className="text-4xl -ml-0.5 text-mywhite-50 lg:-ml-1.5 font-normal xl:text-6xl 2xl:text-7xl pb-2">
 						Our Story
 					</h2>
