@@ -49,7 +49,7 @@ module.exports = {
 					200: "#7df9ff",
 				},
 				lilac: {
-					100: "#E9F0FF",
+					100: "#236bfe",
 				},
 			},
 

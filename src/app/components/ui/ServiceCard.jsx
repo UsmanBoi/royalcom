@@ -139,12 +139,16 @@ const ServiceCard = ({
 
 					return (
 						<div
+							style={{
+								scale: isActive || isHovered ? "1" : "1",
+								translate: isActive || isHovered ? "" : "",
+								transformOrigin: "right",
+								transition: "scale 0.3s ease, translate 0.3s ease",
+							}}
 							key={index}
 							ref={(el) => (cardRefs.current[index] = el)}
-							className={`group ${cardClass} snap-center max-w-[370px] transition-all duration-300 ease-in-out ${
-								isActive
-									? "bg-gradient-to-t from-blue-400/30 via-blue-400/20 to-transparent"
-									: "bg-lilac-100/80"
+							className={`group ${cardClass} snap-center z-0 max-w-[370px] transition-all duration-300 ease-in-out ${
+								isActive || isHovered ? "" : "bg-lilac-100/10"
 							}`}
 							onMouseEnter={() => {
 								setHoveredIndex(index);
@@ -154,11 +158,18 @@ const ServiceCard = ({
 								setHoveredIndex(null);
 							}}
 						>
+							<div
+								className={`absolute bottom-0 min-h-full w-full z-0 transition-all duration-300 ease-in-out ${
+									isActive || isHovered
+										? "bg-gradient-to-t from-blue-500/60 via-blue-400/10 to-transparent"
+										: ""
+								} `}
+							/>
 							<div className="relative flex min-h-[25rem] w-full items-end">
 								<div className="flex flex-col gap-2.5 px-4 sm:px-5 pb-6 text-myblack-150">
 									<div
 										className={`${
-											isActive || isHovered ? "-translate-y-2" : ""
+											isActive || isHovered ? "translate-y-2" : ""
 										}  flex items-center justify-between transition-all duration-300 ease-in-out`}
 									>
 										<h1
@@ -185,54 +196,60 @@ const ServiceCard = ({
 												isActive || isHovered
 													? {
 															transform: "scale(1.3)",
-															transformOrigin: "left",
+															transformOrigin: "top",
 															transition: "transform 0.3s ease",
 														}
 													: {
 															transform: "scale(1)",
-															transformOrigin: "left",
+															transformOrigin: "bottom",
 															transition: "transform 0.3s ease",
 														}
 											}
 										/>
 									</div>
-
+									{/* divider */}
 									<div
 										className={`h-[1.3px] w-80 outline-0 sm:w-full transition-all duration-300 ease-in-out ${
 											isActive || isHovered
-												? "bg-mywhite-100 -translate-y-2"
+												? "bg-mywhite-100 translate-y-2"
 												: "bg-myblack-100"
 										}`}
 									/>
 									<p
 										className={`${
 											isActive || isHovered
-												? "text-mywhite-50 -translate-y-2"
+												? "text-mywhite-50 translate-y-4 opacity-0"
 												: ""
 										}  text-sm 2xl:text-base transition-all duration-300 ease-in-out`}
 									>
 										{service.headline}
 									</p>
-									<Link
-										href={`/services/${service.slug}`}
-										className={`w-fit text-mywhite-50 transition-all duration-300 ease-in-out hover:text-myblue-50 ${
-											isActive || isHovered
-												? "translate-y-0.5 opacity-100"
-												: "translate-y-10 opacity-0"
-										} rounded-full bg-myblack-150 px-4 py-0.5 text-sm xl:text-base`}
-									>
-										Read More
+									<Link href={`/services/${service.slug}`}>
+										<button
+											type="button"
+											className={`w-fit flex min-w-80 pl-1 transition-all duration-300 ease-in-out items-center ${
+												isActive || isHovered
+													? "-translate-y-6 opacity-100 text-mywhite-50"
+													: "translate-y-10 opacity-0"
+											}`}
+										>
+											{/* Button text */}
+											<span className="">Read More</span>
+											<GoArrowRight
+												className={`w-12 transition-all duration-300 ease-in-out`}
+											/>
+										</button>
 									</Link>
 								</div>
 
 								<StaticImg
 									alt="alt text"
 									src={service.imgPath}
-									className={`absolute left-0 top-0 -z-10 transition-all duration-200 ease-linear ${
+									className={`absolute left-0 top-0 -z-50 transition-all duration-200 ease-linear ${
 										isActive || isHovered
 											? "translate-y-0 opacity-100"
-											: "pointer-events-none translate-y-5 opacity-0"
-									} h-[25rem] w-full object-cover object-center`}
+											: "pointer-events-none translate-y-5 opacity-0 "
+									} h-[25rem] w-full object-cover object-center `}
 								/>
 							</div>
 						</div>

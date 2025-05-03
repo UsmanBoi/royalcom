@@ -14,7 +14,7 @@ const BenefitCard = ({ cardData }) => {
 			{visibleCards.map((benefit, id) => (
 				<div
 					key={id}
-					className="bg-lilac-100 grid min-h-40 max-w-full grid-cols-[1fr_1fr] gap-4 rounded px-3 py-2 sm:p-4 max-sm:max-w-sm 2xl:max-w-xl 2xl:py-5"
+					className="bg-lilac-100/10 grid min-h-40 max-w-full grid-cols-[1fr_1fr] gap-4 rounded px-3 py-2 sm:p-4 max-sm:max-w-sm 2xl:max-w-xl 2xl:py-5"
 				>
 					<div className="flex flex-col justify-center gap-2">
 						<h1 className="text-lg font-medium xl:text-xl">{benefit.title}</h1>

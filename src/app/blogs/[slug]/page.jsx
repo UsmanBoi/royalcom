@@ -32,7 +32,7 @@ const BlogDetailPage = ({ params }) => {
 			<article
 				className={`max-w-full flex items-center justify-center w-full ${paddingClass}`}
 			>
-				<section className="my-4 flex flex-col 2xl:max-w-screen-xl 3xl:max-w-screen-2xl 2xl:pr-40 bg-lilac-100/50 rounded px-6 2xl:px-16 py-10">
+				<section className="my-4 flex flex-col 2xl:max-w-screen-xl 3xl:max-w-screen-2xl 2xl:pr-40 bg-lilac-100/10 rounded px-6 2xl:px-16 py-10">
 					<div className="flex flex-col gap-8">
 						<div className="flex flex-col gap-4">
 							<h1 className="text-2xl font-bold sm:text-4xl md:text-5xl xl:text-6xl 2xl:text-7xl ">

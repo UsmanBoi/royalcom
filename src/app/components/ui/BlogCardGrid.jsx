@@ -7,7 +7,7 @@ export const BlogCard = ({ card }) => {
 	return (
 		<div
 			key={card.id}
-			className={`w-full max-w-lg h-full backdrop-blur-md rounded bg-gradient-to-r group hover:border-blue-400 bg-lilac-100/60 duration-300 transition-all ease-in-out p-4 2xl:px-6  ${card.spanClass}`}
+			className={`w-full max-w-lg h-full backdrop-blur-md rounded bg-gradient-to-r group hover:border-blue-400 bg-lilac-100/10 duration-300 transition-all ease-in-out p-4 2xl:px-6  ${card.spanClass}`}
 		>
 			<Link href={`/blogs/${card.slug}`}>
 				<div
