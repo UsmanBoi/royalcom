@@ -25,8 +25,9 @@ const serviceDetailPage = ({ params }) => {
 			className={`flex flex-col w-full h-full gap-5 mb-5 items-center justify-center ${paddingClass}`}
 		>
 			<SecHero
-				containerClass="max-sm:gap-0"
-				HeroHeading="max-sm:gap-y-12"
+				containerClass="max-sm:gap-0 py-10 max-sm:h-[17em]"
+				HeroContentClass="max-sm:gap-y-8"
+				headingClass="max-xs:text-4xl xs:text-[36px] leading-[120%] max-sm:max-w-72"
 				heading={service.title}
 				withImage={false}
 				subheading={service.headline}
@@ -43,8 +44,13 @@ const serviceDetailPage = ({ params }) => {
 										: i === 2
 											? "sm:col-start-1 sm:row-start-3 lg:pr-20 justify-end"
 											: ""
-							}`}
+							} ${i % 2 === 1 ? "slide-in-right" : "slide-in-left"}`}
 							key={i}
+							style={{
+								transitionDelay: `${
+								 150 + i * 120
+								}ms`,
+							}}
 						>
 							<p className={`sm:text-lg max-sm:w-80`}>{content}</p>
 						</div>
@@ -54,7 +60,7 @@ const serviceDetailPage = ({ params }) => {
 							// fill
 							src={service.imgPath}
 							alt={service.title}
-							className="w-full h-full rounded-lg object-cover object-center "
+							className="w-full expand-height h-full rounded-lg object-cover object-center "
 						/>
 					</div>
 				</div>

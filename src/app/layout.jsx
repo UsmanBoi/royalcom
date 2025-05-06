@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import localfont from "next/font/local";
-import Header from "./components/Header";
+import HeaderShell from "./components/ui/HeaderShell";
+import HeaderContent from "./components/ui/HeaderContent";
 import Footer from "./components/Footer";
 import "./globals.css";
 import CTASection from "./components/CTASection";
@@ -24,7 +25,9 @@ export default function RootLayout({ children }) {
 		<html lang="en" className={`${interFont.variable} no-scrollbar`}>
 			<body>
 				<main className="h-auto">
-					<Header />
+				<HeaderShell>
+  <HeaderContent />
+</HeaderShell>
 					<div className="flex mt-20 h-full mb-12">
 						<InViewObserver/>
 						{children}

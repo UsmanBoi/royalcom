@@ -3,11 +3,11 @@ import Link from "next/link";
 import StaticImg from "./StaticImg";
 import { GoArrowRight } from "react-icons/go";
 
-export const BlogCard = ({ card }) => {
+export const BlogCard = ({ card, cardStyle }) => {
 	return (
 		<div
-			key={card.id}
-			className={`w-full max-w-lg h-full backdrop-blur-md rounded bg-gradient-to-r group hover:border-blue-400 bg-lilac-100/10 duration-300 transition-all ease-in-out p-4 2xl:px-6  ${card.spanClass}`}
+			className={`fade-up w-full max-w-lg h-full backdrop-blur-md rounded bg-gradient-to-r group hover:border-blue-400 bg-lilac-100/10 duration-300 transition-all ease-in-out p-4 2xl:px-6  ${card.spanClass}`}			
+			style={cardStyle}
 		>
 			<Link href={`/blogs/${card.slug}`}>
 				<div
@@ -53,7 +53,11 @@ const BlogCardGrid = ({ gridClass, cardData }) => {
 	return (
 		<div className={`grid ${gridClass}`}>
 			{cardData.map((card) => (
-				<BlogCard key={card.id} card={card} />
+				<BlogCard key={card.id} card={card} cardStyle={{
+					transitionDelay: `${
+					 150 + card.id * 120
+					}ms`,
+				}} />
 			))}
 		</div>
 	);

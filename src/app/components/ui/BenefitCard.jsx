@@ -14,6 +14,11 @@ const BenefitCard = ({ cardData }) => {
 			{visibleCards.map((benefit, id) => (
 				<div
 					key={id}
+					style={{
+							transitionDelay: `${
+							 150 + id * 120
+							}ms`,
+						}}
 					className="slide-in-up bg-lilac-100/10 grid min-h-40 max-w-full grid-cols-[1fr_1fr] gap-4 rounded px-3 py-2 sm:p-4 max-sm:max-w-sm 2xl:max-w-xl 2xl:py-5"
 				>
 					<div className="flex flex-col justify-center gap-2">

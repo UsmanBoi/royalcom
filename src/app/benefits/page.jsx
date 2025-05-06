@@ -10,7 +10,6 @@ const BenefitsPage = () => {
 				subheading="RoyalCom provides many benefits that includes cost efficiency, scalable infrastructures, clean billing and improved patient satisfaction"
 				img1src="/office.jpg"
 				img2src="/hospital.jpg"
-				containerClass="max-lg:min-h-[48rem]"
 			/>
 
 			<Benefits

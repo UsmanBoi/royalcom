@@ -55,17 +55,17 @@ const Benefits = ({ variation, containerClass }) => {
 			<div className="grid relative w-full min-h-[45em] xl:justify-items-center xl:place-self-center 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
 				<div className="flex max-sm:flex-col max-sm:gap-y-5 justify-between self-start absolute -left-2 w-full -top-24 lg:-top-10 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
 					<h1
-						className={`${secHeading} h-fit max-sm:max-w-[28rem]`}
+						className={`${secHeading} slide-in-left h-fit max-sm:max-w-[28rem]`}
 						style={{ wordSpacing: "0.1em" }}
 					>
 						Discover Our Benefits
 					</h1>
 					<div className="flex justify-between lg:h-20 xl:h-24 items-center max-w-32 sm:gap-x-6 w-full max-h-32">
 						<button onClick={handleprev}>
-							<GoArrowLeft className="text-4xl sm:text-5xl w-12" />
+							<GoArrowLeft className="fade-up text-4xl sm:text-5xl w-12" />
 						</button>
 						<button onClick={handlenext}>
-							<GoArrowRight className="text-4xl sm:text-5xl w-12" />
+							<GoArrowRight className="fade-up text-4xl sm:text-5xl w-12" />
 						</button>
 					</div>
 				</div>
@@ -78,14 +78,19 @@ const Benefits = ({ variation, containerClass }) => {
 						key={id}
 					>
 						<div className={`flex flex-col gap-5 max-w-2xl`}>
-							<h1 className="text-4xl lg:text-4xl xl:text-3xl 2xl:text-4xl -ml-1 font-normal">
+							<h1 className="slide-in-left text-4xl 2xl:text-5xl -ml-1 font-normal">
 								{activeIndex === id ? benefit.title : ""}
 							</h1>
-							<div className="flex flex-col gap-2.5  2xl:text-lg">
+							<div className="flex flex-col gap-2.5 2xl:text-lg">
 								{benefit.content.map((content, index) => (
 									<p
 										key={index}
-										className="flex h-full max-w-sm sm:max-w-md flex-col justify-center gap-2 pr-6 xl:max-w-lg 2xl:max-w-xl"
+										style={{
+											transitionDelay: `${
+											 150 + id * 120
+											}ms`,
+										}}
+										className="fade-up flex h-full max-w-sm sm:max-w-md flex-col justify-center gap-2 pr-6 xl:max-w-lg 2xl:max-w-xl"
 									>
 										{content}
 									</p>
@@ -93,7 +98,11 @@ const Benefits = ({ variation, containerClass }) => {
 								<div className="flex flex-col gap-2 pl-6 py-2">
 									{benefit.points.map((point, pointid) => (
 										<div key={pointid} className="max-w-lg 2xl:text-base">
-											<li>{point}</li>
+											<li className="fade-up" style={{
+							transitionDelay: `${
+							 150 + pointid * 120
+							}ms`,
+						}}>{point}</li>
 										</div>
 									))}
 								</div>

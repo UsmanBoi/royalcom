@@ -10,12 +10,14 @@
 .slide-in-left,
 .slide-in-up,
 .slide-in-down,
-.expand-height,
-.grow-in,
-.expand-width {
-  @apply transition-all duration-700 ease-out;
+.grow-in {
+	@apply transition-all duration-700 ease-in-out;
 }
 
+.expand-height,
+.expand-width {
+  @apply transition-all duration-[600ms] ease-linear;
+}
 /* Fade-up animation for headings and paragraphs */
 .fade-up {
   @apply translate-y-8 opacity-0;

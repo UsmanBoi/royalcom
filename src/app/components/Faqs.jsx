@@ -52,7 +52,11 @@ export const FaqCard = ({ cardData }) => {
 	return (
 		<div className="max-sm:max-w-[26em] space-y-4 pl-2 sm:px-2 max-md:pr-8 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
 			{cardData.map((faq, index) => (
-				<div key={index} className="fade-up border-b lg:-mt-3 border-gray-300 py-2 ">
+				<div key={index} className="fade-up border-b lg:-mt-3 border-gray-300 py-2" style={{
+					transitionDelay: `${
+					 100 + index * 150
+					}ms`,
+				}}>
 					<button
 						type="button"
 						onClick={() => toggleItem(index)}

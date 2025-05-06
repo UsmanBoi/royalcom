@@ -148,13 +148,13 @@ const ServiceCard = ({
 					onClick={handlePrev}
 					className="transition-transform hover:scale-110 focus:outline-none"
 				>
-					<GoArrowLeft className="text-4xl sm:text-5xl w-12" />
+					<GoArrowLeft className="fade-up text-4xl sm:text-5xl w-12" />
 				</button>
 				<button 
 					onClick={handleNext}
 					className="transition-transform hover:scale-110 focus:outline-none"
 				>
-					<GoArrowRight className="text-4xl sm:text-5xl w-12" />
+					<GoArrowRight className="fade-up text-4xl sm:text-5xl w-12" />
 				</button>
 			</div>
 
@@ -194,7 +194,7 @@ const ServiceCard = ({
 										: ""
 								} `}
 							/>
-							<div className="relative fade-up flex min-h-[25rem] w-full items-end">
+							<div className="relative flex min-h-[25rem] w-full items-end">
 								<div className="flex flex-col gap-2.5 px-4 sm:px-5 pb-6 text-myblack-150">
 									<div
 										className={`${

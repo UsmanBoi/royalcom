@@ -26,6 +26,7 @@ export default function InViewObserver() {
         });
       },
       {
+        // once: false,
         threshold: 0.1,
         rootMargin: '0px 0px -10% 0px',
       }

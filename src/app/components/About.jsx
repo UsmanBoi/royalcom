@@ -16,7 +16,7 @@ const About = () => {
 						// fill
 						src="/about.jpg"
 						alt=""
-						className="h-[25rem] expand-width max-xs:w-fit xs:max-w-[24em] lg:max-w-full rounded object-cover object-center lg:h-[83%]"
+						className="h-[24em] expand-width max-xs:w-fit xs:max-w-[24em] lg:max-w-full rounded object-cover object-center lg:h-[83%]"
 					/>
 				</div>
 

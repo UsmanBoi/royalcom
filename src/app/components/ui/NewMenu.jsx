@@ -14,14 +14,26 @@ export default function NewMenu({ links }) {
 		const handleResize = () => setScreenSize(getCurrentScreenSize());
 		handleResize(); // Initial size
 		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
+	
+		// Lock scroll when menu is open
+		if (open) {
+			document.body.style.overflow = "hidden";
+		} else {
+			document.body.style.overflow = "";
+		}
+	
+		return () => {
+			window.removeEventListener("resize", handleResize);
+			document.body.style.overflow = ""; // Clean up
+		};
+	}, [open]);
+	
 
 	return (
 		<>
 			{/* Mobile Menu Overlay */}
 			<div
-				className={`fixed inset-0 z-50 h-[100svh] bg-mywhite-50 backdrop-blur-lg transition-all duration-300 ease-in-out ${
+				className={`fixed inset-0 z-50 min-h-screen bg-mywhite-50 backdrop-blur-lg transition-all duration-300 ease-in-out ${
 					open
 						? "translate-x-0 delay-150 "
 						: "translate-x-full delay-500 w-screen"
