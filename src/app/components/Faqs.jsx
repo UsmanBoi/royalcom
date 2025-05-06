@@ -13,7 +13,7 @@ const Faqs = () => {
 			>
 				<div className="flex w-full flex-col justify-between gap-y-5 sm:gap-y-4 self-start sm:h-full">
 					<h1
-						className={`h-fit leading-[120%] w-[28rem] md:w-[36rem] text-5xl md:text-[52px] lg:text-6xl  xl:text-7xl  capitalize`}
+						className={`h-fit fade-up leading-[120%] w-[28rem] md:w-[36rem] text-5xl md:text-[52px] lg:text-6xl  xl:text-7xl  capitalize`}
 						style={{ wordSpacing: "0.1em" }}
 					>
 						Frequently Asked Questions
@@ -52,7 +52,7 @@ export const FaqCard = ({ cardData }) => {
 	return (
 		<div className="max-sm:max-w-[26em] space-y-4 pl-2 sm:px-2 max-md:pr-8 2xl:max-w-screen-2xl 3xl:max-w-screen-2xl">
 			{cardData.map((faq, index) => (
-				<div key={index} className="border-b lg:-mt-3 border-gray-300 py-2 ">
+				<div key={index} className="fade-up border-b lg:-mt-3 border-gray-300 py-2 ">
 					<button
 						type="button"
 						onClick={() => toggleItem(index)}

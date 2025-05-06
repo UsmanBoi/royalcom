@@ -27,7 +27,7 @@ const Benefits = ({ variation, containerClass }) => {
 		>
 			<div className={`flex flex-col gap-y-6 max-lg:py-8 sm:gap-y-12 `}>
 				<h1
-					className={`h-fit sm:w-[30rem] 3xl:leading-[1.3] max-3xl:leading-[1.275em] ${secHeading}`}
+					className={`h-fit sm:w-[30rem] fade-up 3xl:leading-[1.3] max-3xl:leading-[1.275em] ${secHeading}`}
 					style={{ wordSpacing: "0.1em" }}
 				>
 					Our Benefits
@@ -38,7 +38,7 @@ const Benefits = ({ variation, containerClass }) => {
 					<Link href="/benefits">
 						<button
 							type="button"
-							className={`w-fit flex min-w-80 pl-1 items-center`}
+							className={`w-fit slide-in-left flex min-w-80 pl-1 items-center`}
 						>
 							{/* Button text */}
 							<span className="text-lg">View All</span>

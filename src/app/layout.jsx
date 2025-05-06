@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
 import CTASection from "./components/CTASection";
+import InViewObserver from "./components/ui/InViewObserver";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,10 @@ export default function RootLayout({ children }) {
 			<body>
 				<main className="h-auto">
 					<Header />
-					<div className="flex mt-20 h-full mb-20">{children}</div>
+					<div className="flex mt-20 h-full mb-12">
+						<InViewObserver/>
+						{children}
+						</div>
 					<CTASection />
 					<Footer extraStyle="text-mywhite-50 bg-myblack-50" />
 				</main>
