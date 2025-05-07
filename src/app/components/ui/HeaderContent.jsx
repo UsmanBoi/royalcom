@@ -7,14 +7,15 @@ import CTAButton from "./CTAButton";
 export default async function HeaderContent() {
   return (
     <header
-      className={`${paddingClass} grid h-[4.5rem] min-w-full grid-cols-[1fr_1fr] items-center justify-between border-b-2 border-gray-200/80 bg-mywhite-100 bg-opacity-90 backdrop-blur-[5px] md:grid-cols-[1fr_2fr_1fr]`}
+      className={`${paddingClass} grid h-[4.65rem] min-w-full grid-cols-[1fr_1fr] items-center justify-between border-b-2 border-gray-200/80 bg-mywhite-100 bg-opacity-90 backdrop-blur-[5px] md:grid-cols-[1fr_2fr_1fr]`}
     >
       <Link
         href="/"
         aria-label="Home Button"
-        className="text-lg w-fit font-semibold text-myblue-50"
+        className="flex justify-center h-8 flex-col gap-[3px] w-fit text-myblue-50"
       >
-        <span className="tracking-[-0.035em]">RoyalComSol</span>
+        <span className="text-[18px] font-light  leading-none tracking-[-0.03em] ">RoyalCom</span>
+        <span className="text-[18px] font-semibold lg:font-medium leading-none tracking-[-0.03em] ">Solutions</span>
       </Link>
       <Menu extraClass="" pageName="header" />
 

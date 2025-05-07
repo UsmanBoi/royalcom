@@ -9,7 +9,7 @@ export default function HeaderShell({ children }) {
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      setScrollUp(currentY < lastScrollY || currentY < 10);
+      setScrollUp(currentY < lastScrollY || currentY < 140);
       setLastScrollY(currentY);
     };
 

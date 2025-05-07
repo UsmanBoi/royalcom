@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
 						{children}
 						</div>
 					<CTASection />
-					<Footer extraStyle="text-mywhite-50 bg-myblack-50" />
+					<Footer extraClass="text-mywhite-50 bg-myblack-50" />
 				</main>
 			</body>
 		</html>

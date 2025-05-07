@@ -25,13 +25,7 @@ const Hero = () => (
 				<div className="flex flex-col gap-y-2.5">
 					<h2 className="fade-up w-full text-sm sm:max-w-md lg:max-w-xl lg:text-base 2xl:text-lg max-sm:max-w-80 font-normal">
 						Royal Com Solutions is a leading organization that offers custom BPO
-						strategies and services including clean billing using modern coding,
-						claim denial managament and accurate reimbursements that enhance
-						patient interactions, boost efficiency, and drive revenue growth.
-						{/* RoyalComSol specializes in medical billing and Revenue Cycle
-						Management (RCM), providing services including clean billing using
-						modern coding tools, accurate reimbursements, reduced claim denials,
-						risk of errors and improve your overall revenue system. */}
+						strategies and services including clean billing, claim denial managament and accurate reimbursements that enhance patient interactions, boost efficiency, and drive revenue growth.
 					</h2>
 
 					{/* CTA BUTTON */}

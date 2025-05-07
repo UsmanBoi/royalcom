@@ -71,7 +71,7 @@ export default function NewMenu({ links }) {
 				<div className="flex gap-2 lg:gap-4">
 					{links.map((item, index) => (
 						<button
-							className={`h-10 w-fit min-w-24 lg:min-w-32 transition-all duration-300 ease-in-out`}
+							className={`h-10 group hover:scale-[1.025] hover:font-medium w-fit min-w-24 lg:min-w-32 transition-all duration-300 ease-in-out`}
 							key={index}
 							// style={{
 							// 	transitionDelay: `${

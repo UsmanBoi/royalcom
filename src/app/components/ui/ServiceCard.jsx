@@ -135,6 +135,7 @@ const ServiceCard = ({
 	};
 
 	const handleCardHover = (index) => {
+
 		// Always update hoveredIndex for visual feedback
 		setHoveredIndex(index);
 	};
@@ -180,12 +181,14 @@ const ServiceCard = ({
 							className={`group ${cardClass} snap-center z-0 max-w-[370px] transition-all duration-300 ease-in-out ${
 								isActiveOrHovered ? "" : "bg-lilac-100/10"
 							}`}
-							onMouseEnter={() => handleCardHover(index)}
+							onMouseEnter={() => {handleCardHover(index)
+								setActiveIndex(index)
+							}}
 							onMouseLeave={() => {
 								setHoveredIndex(null);
 							}}
 							// Add touch support for mobile
-							onTouchStart={() => handleCardHover(index)}
+							// onTouchStart={() => {handleCardHover(index)}}
 						>
 							<div
 								className={`absolute bottom-0 min-h-full w-full z-0 transition-all duration-300 ease-in-out ${

@@ -112,6 +112,7 @@ p,
 span {
 	letter-spacing: -0.04%;
 	color: "#33ffaa";
+	/* font-weight: 300; */
 }
 
 :root {

@@ -405,7 +405,7 @@ export const benefitData = [
 		title: "Scalability",
 		headline:
 			"Optimize daily operations to meet growing market demands without needing additional infrastructure.",
-		imgPath: "/RCM.jpg",
+		imgPath: "/scalablity.svg",
 		content: [
 			"At RoyalCom Solutions, we understand that your business needs change over time. Whether you're a startup looking for flexibility or an established company aiming for expansion, our scalable solutions ensure seamless growth without unnecessary overhead costs.",
 			"By leveraging our scalable BPO solutions, healthcare firms can focus on delivering better patient care while we handle the complexities of scaling operations efficiently.",
